@@ -16,20 +16,19 @@
 
 ## 기술 스택 (Technique Used) (예시)
 ### Server(back-end)
- -  nodejs, php, java 등 서버 언어 버전 
+ - Spring 서버 언어 버전(세부내역은 서버당담자가 작성) 
  - express, laravel, sptring boot 등 사용한 프레임워크 
  - DB 등 사용한 다른 프로그램 
  
 ### front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
- - 기타 사용한 라이브러리
+ - react.js, vue.js 등 사용한 front-end 프레임워크
+ - UI framework
+ - datatable
 
 ## 설치 안내 (Installation Process)
 ```bash
 $ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
+$ 추후 추가
 ```
 
 ## 프로젝트 사용법 (Getting Started)
@@ -44,6 +43,8 @@ $ yarn start or npm run start
  
 ## 팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
+- jeong jong woo (knight7024@naver.com), Githun Id: knight7024
+- lee dong jun (), Githun Id: knight7024
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
