@@ -25,6 +25,10 @@
  - UI framework
  - datatable
 
+### App
+ - Andorid Studio
+ - Intent Service사용
+
 ## 설치 안내 (Installation Process)
 ```bash
 $ git clone git주소
