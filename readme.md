@@ -9,7 +9,7 @@
 ## 기능 설계
  - android intent service를 이용 
  - 수기로 작성시 찍어서 올려주세요
-
+ ![Github logo](/PPT/status.png) 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * ECMAScript 6 지원 브라우저 사용
 * 권장: Google Chrome 버젼 77 이상
