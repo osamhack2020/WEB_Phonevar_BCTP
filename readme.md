@@ -50,7 +50,7 @@ $ 추후 추가
 ## 팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
 - jeong jong woo (knight7024@naver.com), Githun Id: knight7024
-- lee dong jun (), Githun Id: knight7024
+- lee dong jun (), Githun Id: JunBeul
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
