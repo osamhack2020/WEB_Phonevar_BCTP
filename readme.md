@@ -35,7 +35,8 @@
 $ git clone git주소
 $ 추후 추가
 ```
-
+## 개발일정
+![Alt text](/PPT/개발일정.png)
 ## 프로젝트 사용법 (Getting Started)
 **마크다운 문법을 이용하여 자유롭게 기재**
 
