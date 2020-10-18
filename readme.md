@@ -11,8 +11,6 @@
 
 ## 기능 설계
  - android intent service를 이용 
- - 각 사용자별 상태 변화도(서버)
- ![Github logo](/PPT/status.png) 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * ECMAScript 6 지원 브라우저 사용
 * 권장: Google Chrome 버젼 77 이상
