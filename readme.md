@@ -1,4 +1,5 @@
-# Smaple Logo
+더 자세한 개발현황은 [https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e)에서 확인하시면 됩니다.
+# Logo
 준비중
 
 팀명 텍스트 및 팀명 로고 이미지 **(택1)**
