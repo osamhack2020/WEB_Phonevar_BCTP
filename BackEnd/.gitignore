@@ -1,0 +1,19 @@
+# IntelliJ
+.idea/
+/*.classpath
+/.classpath
+/.springBeans
+*.DS_Store
+*.iml
+.project
+/.settings
+/build
+/local.properties
+target/
+out/
+
+# properties file
+
+
+classes/*
+lib/*
