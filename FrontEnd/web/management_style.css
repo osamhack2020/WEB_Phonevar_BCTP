@@ -1,5 +1,8 @@
-@charset "utf-8";
+/* 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300&display=swap');
+
+/* 기본 설정입니다. */
+@charset "utf-8";
 
 *{
     box-sizing: border-box;
@@ -10,18 +13,13 @@
 	user-select:none;
     font-family: 'Noto Sans KR', sans-serif;
 }
-
+html {
+	margin:0; padding:0;
+	overflow-y:scroll;
+} 
 body {
 	-webkit-text-size-adjust:none;
 }
-/* BASIC */
-html {
-	margin:0; padding:0;
-} 
-
-html {
-	overflow-y:scroll;
-} 
 body, p, ul, ol, li, dl, dt, dd, form, table, th, td, fieldset, input, textarea, select, button, h1, h2, h3, h4, h5, h6, pre {
 	margin:0; 
 	padding:0; 
@@ -73,12 +71,9 @@ html, body {
 	background: #ecf0f3;
 }
 
-#wrap{
-	width: 100%;
-	height: 100%;
-}
+/* 시작! */
 
-/*스타뚜!*/
+/* 전체 화면 */
 .viewPg{
 	width: 1000px;
 	height: 100%;
@@ -86,12 +81,14 @@ html, body {
 	margin-right: auto;
 	padding-top: 60px;
 }
+
+/* 해더 */
 .titleBox{
 	text-align: center;
     position: relative;
 	
 }
-/*이름박스*/
+/** 이름박스 **/
 .mainTitle{
 	font-family: 'Do Hyeon', sans-serif;
 	font-size: 8em;
@@ -105,7 +102,7 @@ html, body {
 	letter-spacing: 9px;
     position: relative;
 }
-/*버튼들*/
+/** 버튼들 **/
 .btnBox{
     width: 100%;
     height: 100%;
@@ -144,7 +141,8 @@ html, body {
 	transform: rotate(-45deg);
 }
 
-/*인원들*/
+/*네비*/
+/**인원들**/
 .preview{
     background: #ecf0f3;
     width: 90px;
@@ -237,7 +235,7 @@ html, body {
     bottom: -16%;
     box-shadow: 0 5px 20px -10px #3f3f3f;
 }
-/*로그 팝업*/
+/** 로그 팝업 **/
 .SelectTr{
 	background-color: #ecf0f3;
 	width: 580px;
@@ -299,8 +297,7 @@ html, body {
 	border-radius: 10px;
 	border: 1px solid #748388;
 }
-
-/*상태변경버튼*/
+/***상태변경버튼***/
 .stateChange{
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -361,7 +358,7 @@ html, body {
 	transition: .3s;
 }
 
-/**시간설정**/
+/**시간 팝업**/
 .setTime > .title{
     text-align: center;
     margin: 20px;
@@ -371,7 +368,7 @@ html, body {
     margin-right: -10px;
 	font-weight: bold;
 }
-/*평일, 휴일*/
+/***평일, 휴일***/
 .setTime{
     position: relative;
     transform: translate(-50%, -50%);
@@ -414,7 +411,7 @@ html, body {
     color: #ecf0f3;
     background: linear-gradient(to right bottom, rgb(54, 190, 169, 1), rgb(175, 126, 224, 1));
 }
-/**시간**/
+/***시간***/
 .setTime > .showTime{
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -586,15 +583,4 @@ html, body {
 }
 .scrollHeader > .refresh{
 	right: 0;
-}
-.scrollHeader > .preview{
-	box-shadow: none;
-	background: #ecf0f3;
-    width: 90px;
-    height: 32px;
-    border-radius: 20px;
-    margin: 10px auto 10px auto;
-    box-shadow: 0 10px 20px #cbced1;
-    overflow: hidden;
-    position: relative;
 }
