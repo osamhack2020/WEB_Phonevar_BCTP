@@ -1,0 +1,600 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select:none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+	-webkit-text-size-adjust:none;
+}
+/* BASIC */
+html {
+	margin:0; padding:0;
+} 
+
+html {
+	overflow-y:scroll;
+} 
+body, p, ul, ol, li, dl, dt, dd, form, table, th, td, fieldset, input, textarea, select, button, h1, h2, h3, h4, h5, h6, pre {
+	margin:0; 
+	padding:0; 
+	-webkit-text-size-adjust:none; 
+	font-family: "돋움", Dotum, Droid Sans, AppleSDGothicNeo, AppleGothic, Helvetica, Sans-serif; 
+} 
+body, input, textarea, select, button {
+	color: #141413;
+	font-size:12px; 
+	font-family: Dotum; 
+}
+header, footer, nav, aside, section, article {
+	display:block;
+}
+fieldset, img {
+	border:0;
+} 
+img {
+	-ms-interpolation-mode:bicubic !important; 
+	border:0;
+} 
+table {
+	padding:0; 
+	border-spacing:0px; 
+	border:0; 
+	border-collapse:collapse;
+}
+ul, ol {
+	list-style:none;
+}
+a {
+	color: #141413;
+	text-decoration:none;
+} 
+a:link {
+	color:#606060; 
+	text-decoration:none;
+}
+a:hover {
+	color:#ffa172;
+} 
+.clear { 
+	clear:both; 
+}
+html, body {
+	height: 100%;
+	color: #141413;
+	overflow: auto;
+	background: #ecf0f3;
+}
+
+#wrap{
+	width: 100%;
+	height: 100%;
+}
+
+/*스타뚜!*/
+.viewPg{
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 60px;
+}
+.titleBox{
+	text-align: center;
+    position: relative;
+	
+}
+/*이름박스*/
+.mainTitle{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 8em;
+	letter-spacing: 100px;
+    margin-right: -100px;
+	position: relative;
+}
+.subTitle{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 2.5em;
+	letter-spacing: 9px;
+    position: relative;
+}
+/*버튼들*/
+.btnBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 90%;
+    transform: translate(0, -50%);
+}
+.titleBox > .btnBox > .btn{
+	cursor: pointer;
+    height: 70px;
+	width: 70px;
+	background: #ecf0f3;
+  	box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+	border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.2s;
+}
+
+.titleBox > .btnBox > .btn:active{
+    box-shadow: 13px 13px 20px #fff, -13px -13px 20px #cbced1;
+}
+.time{
+    left: 5%;
+}
+.refresh{
+    right: 5%;
+}
+.titleBox > .btnBox > .btn > img{
+	width: 40px;
+	transition: all .3s;
+    margin-top: 15px;
+}
+.titleBox > .btnBox > .btn:hover > img{
+	transform: rotate(-45deg);
+}
+
+/*인원들*/
+.preview{
+    background: #ecf0f3;
+    width: 90px;
+    height: 32px;
+    border-radius: 20px;
+    margin: 10px auto 10px auto;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+.totalColor{
+    background: linear-gradient(to right bottom, #36bea9, #af7ee0);
+    height: 50px;
+    width: 45px;
+    position: absolute;
+    right: 0;
+    transform: rotate(10deg);
+    transform-origin: 50%;
+    top: -9px;
+}
+.preText{
+    position: absolute;
+    width: 45px;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    
+}
+.current{
+    left: 0;
+}
+
+.total{
+    right: 0;
+    color: #ecf0f3;
+}
+
+/*팝업*/
+.popUp{
+	position: relative;
+}
+.balckBg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(48, 46, 46, .5);
+    z-index: 10;
+}
+.popUpBg{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 650px;
+    background-color: #ecf0f3;
+    box-shadow: 0 10px 30px -10px #3f3f3f;
+    z-index: 20;
+    border-radius: 25px;
+}
+.close{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -15.5%;
+    background: linear-gradient(to right bottom, #36bea9, #af7ee0);
+    box-shadow: 0 10px 30px -10px #3f3f3f;
+    width: 140px;
+    height: 50px;
+    z-index: 30;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #ecf0f3;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.2em;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    transition: .3s;
+}
+.close:hover{
+    box-shadow: 0 15px 40px -10px #3f3f3f;
+    bottom: -14.5%;
+}
+.close:active{
+    bottom: -16%;
+    box-shadow: 0 5px 20px -10px #3f3f3f;
+}
+/*로그 팝업*/
+.SelectTr{
+	background-color: #ecf0f3;
+	width: 580px;
+	height: 42px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 21px;
+	box-shadow: 0 10px 30px -10px #3f3f3f;
+	display:table;
+	table-layout: fixed;
+	overflow: hidden;
+}
+.sContent{
+	width: auto;
+	height: 42px;
+	display: table-cell;
+	line-height: 42px;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5em;
+	font-weight: bold;
+	float: left;
+	padding: 0 15px;
+	vertical-align: middle;
+	text-align: center;
+}
+.sType{
+	width: 18%;
+	color: #ecf0f3;
+	background-color: #f00;
+	border-radius: 21px;
+}
+.sName{
+	width: 25%;
+}
+.sNum{
+	width: 30%;
+}
+.sDate{
+	width: 27%;
+}
+.log{
+	width: 760px;
+	height: 480px;
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	overflow: auto;
+	transform: translate(-50%, -50%);
+}
+.log::-webkit-scrollbar {
+	width: 15px;
+}
+.log::-webkit-scrollbar-thumb {
+	background: linear-gradient(to right bottom, #36bea9, #af7ee0);
+	border-radius: 10px;
+}
+.log::-webkit-scrollbar-track {
+	border-radius: 10px;
+	border: 1px solid #748388;
+}
+
+/*상태변경버튼*/
+.stateChange{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	bottom: -2%;
+	left: 50%;
+	width: 150px;
+	height: 80px;
+	text-align: center;
+	
+}
+.stateChange > p{
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.8em;
+	font-weight: bold;
+	z-index: 100;
+}
+.stateBtn{
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #ecf0f3;
+	height: 30px;
+	margin-top: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+.stateBtnDis{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	z-index: 100;
+	position: absolute;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4em;
+	font-weight: bold;
+	line-height: 28px;
+}
+.left{
+	left: 0;
+	color: #ecf0f3;
+	transition: .3s;
+}
+.right{
+	right: 0;
+	color: #000;
+	transition: .3s;
+}
+.stHandle{
+	width: 60px;
+	height: 100%;
+	background: linear-gradient(to right bottom, #36bea9, #af7ee0);
+	border-radius: 15px;
+	position: absolute;
+	z-index: 10;
+	left: 0%;
+	transition: .3s;
+}
+
+/**시간설정**/
+.setTime > .title{
+    text-align: center;
+    margin: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+	font-size: 4.2em;
+    letter-spacing: 10px;
+    margin-right: -10px;
+	font-weight: bold;
+}
+/*평일, 휴일*/
+.setTime{
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 650px;
+}
+.setTime > .dayChange{
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    top: 20%;
+}
+.setTime > .dayChange > label{
+    position: absolute;
+    width: 120px;
+    height: 44px;
+    background: linear-gradient(to right bottom, rgb(54, 190, 169, 0), rgb(175, 126, 224, 0));
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 44px;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.setTime > .dayChange > label.weekday{
+    left: -80px;
+}
+.setTime > .dayChange > label.holiday{
+    left: 80px;
+    color: #ef325a;
+}
+.setTime > .dayChange > input[type="radio"]{
+    display: none;
+}
+.setTime > .dayChange > input[type="radio"]:checked + label{
+    color: #ecf0f3;
+    background: linear-gradient(to right bottom, rgb(54, 190, 169, 1), rgb(175, 126, 224, 1));
+}
+/**시간**/
+.setTime > .showTime{
+	position: absolute;
+	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+	text-align: center;
+	width: 100%;
+}
+.timeBox{
+	text-align: center;
+	font-weight: bolder;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 8em;
+	width: 280px;
+	border-style: none;
+	background: none;
+	padding: 0 20px 0 20px;
+}
+.timeBox::placeholder{
+	font-size: 0.7em;
+}
+.timeBox:focus{
+    outline:none;
+	box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+	border-radius: 25px;
+	background-color: #ecf0f3;
+}
+.timeing{
+	font-weight: bolder;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 8em;
+	margin: 50px;
+}
+.timeText{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 110%;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+.text1{
+    left: 195px;
+}
+.text2{
+    right: 105px;
+}
+
+/*스크롤 이벤트*/
+/**맨위 버튼**/
+.goToTop{
+	width: 1000px;
+	height: 40px;
+	background: linear-gradient(to right, #36bea9, #af7ee0);
+	border-radius: 20px;
+	box-shadow: 0 10px 30px -10px #3f3f3f;
+	cursor: pointer;
+	position: fixed;
+	transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -10%;
+	transition: .3s;
+	overflow: hidden;
+}
+.goToTop:hover{
+	bottom: 3.5%;
+	box-shadow: 0 15px 40px -10px #3f3f3f;
+}
+.goToTop:active{
+	bottom: 2.8%;
+	box-shadow: 0 5px 20px -10px #3f3f3f;
+}
+.goToTop > .fullArrows{
+	height: 90px;
+	width: 40px;
+	position: absolute;
+	transform: translate(-50%, 0);
+	left: 50%;
+	top: 0px;
+	transition: .3s;
+}
+.goToTop:hover > .fullArrows{
+	top: -50px;
+}
+.goToTop > .fullArrows > .arrow1{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translate(-50%, 0);
+	left: 50%;
+	top: 5px;
+}
+.goToTop > .fullArrows > .arrow2{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translate(-50%, 0);
+	left: 50%;
+	bottom: 5px;
+}
+.A1{
+	width: 4px;
+	height: 23px;
+	background-color: #ecf0f3;
+	transform: rotate(45deg);
+	border-radius: 2px;
+	position: absolute;
+	left: 6px;
+	top: 2px;
+}
+.A2{
+	width: 4px;
+	height: 23px;
+	background-color: #ecf0f3;
+	transform: rotate(-45deg);
+	border-radius: 2px;
+	position: absolute;
+	left: 20px;
+	top: 2px;
+}
+.DArrows1{
+	position: absolute;
+	top: -4px;
+}
+.DArrows2{
+	position: absolute;
+	top: 8px;
+}
+/**해더**/
+.scrollHeader{
+	width: 1000px;
+	height: 80px;
+	background: linear-gradient(to right, #36bea9, #af7ee0);
+	position: fixed;
+	transform: translate(-50%, 0);
+	left: 50%;
+	top: -30%;
+	box-shadow: 0 10px 50px -20px #3f3f3f;
+	transition: .3s;
+}
+.scrollHeader > .subTitle{
+	text-align: center;
+	line-height: 80px;
+	font-weight: bold;
+	color: #ecf0f3;
+	font-size: 3em;
+}
+.scrollHeader > .scrollBtn{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top: 0;
+	cursor: pointer;
+	z-index: 100;
+}
+.scrollHeader > .scrollBtn > img{
+	width: 40px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	transition: .3s;
+}
+.scrollHeader > .scrollBtn:hover > img{
+	width: 45px;
+}
+.scrollHeader > .time{
+	left: 0;
+}
+.scrollHeader > .refresh{
+	right: 0;
+}
+.scrollHeader > .preview{
+	box-shadow: none;
+	background: #ecf0f3;
+    width: 90px;
+    height: 32px;
+    border-radius: 20px;
+    margin: 10px auto 10px auto;
+    box-shadow: 0 10px 20px #cbced1;
+    overflow: hidden;
+    position: relative;
+}

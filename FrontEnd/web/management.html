@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.9.1/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" src="script/sort.js"></script>
+	<script type="text/javascript" src="script/tableInType.js"></script>
+	<script type="text/javascript" src="script/popUp.js"></script>
+	<script type="text/javascript" src="script/tableLoad.js"></script>
+	<script type="text/javascript" src="script/setTime.js"></script>
+	<script type="text/javascript" src="script/scoll.js"></script>
+
+	<link rel="stylesheet" href="management_style.css">
+	<link href="tablestyle.css" rel="stylesheet">
+
+	<!--<link rel="stylesheet" href="timepicker.css">
+	<script src="timepicker.js"></script>-->
+
+	<title>폰바 : 휴대폰 관리</title>
+</head>
+
+<body>
+	<div class="viewPg">
+		<header>
+			<div class="titleBox">
+				<h1 class="mainTitle">폰바</h1>
+				<h2 class="subTitle">전투지휘훈련단</h2>
+
+				<div class="btnBox">
+					<div class="btn time">
+						<img src="img/time.png" alt="시간설정">
+					</div>
+					<div class="btn refresh">
+						<img src="img/refresh.png" alt="새로고침">
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<nav>
+			<div class="preview">
+				<div class="preText current"></div>
+				<div class="totalColor"></div>
+				<div class="preText total"></div>
+			</div>
+		</nav>
+
+		<section>
+			<div class="popUp">
+				<div class="balckBg"></div>
+				<div class="popUpBg">
+					<div class="setTime">
+						<h1 class="title">사용 시간 설정</h1>
+						<div class="dayChange">
+							<input id="weekday" value="평일" type="radio" name="day" checked="checked">
+							<label class="weekday" for="weekday">평일</label>
+							<input id="holiday" value="휴일" type="radio" name="day">
+							<label class="holiday" for="holiday">휴일</label>
+						</div>
+
+						<div class="showTime">
+							<div class="weekdayTime">
+								<!--<input type="text" class="timepicker stratTime">
+									<span>~</span>
+									<input type="text" class="timepicker endTime">
+									<script>
+									$('.timepicker').timepicker();
+									</script>-->
+								<input type="text" class="timeBox stratTime" placeholder="HH:MM" maxlength="5" id="0">
+								<span class="timeing">-</span>
+								<input type="text" class="timeBox endTime" placeholder="HH:MM" maxlength="5" id="1">
+								<div class="timeText text1">시간 부터</div>
+								<div class="timeText text2">시간 까지</div>
+							</div>
+							<div class="holidayTime">
+								<input type="text" class="timeBox stratTime" placeholder="HH:MM" maxlength="5" id="0">
+								<span class="timeing">-</span>
+								<input type="text" class="timeBox endTime" placeholder="HH:MM" maxlength="5" id="1">
+								<div class="timeText text1">시간 부터</div>
+								<div class="timeText text2">시간 까지</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="showLog">
+						<div class="SelectTr">
+							<div class="sContent sType"></div>
+							<div class="sContent sName"></div>
+							<div class="sContent sNum"></div>
+							<div class="sContent sDate"></div>
+						</div>
+						<div class="log">
+							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						</div>
+						<div class="stateChange">
+							<p>상태 변경</p>
+							<div class="stateBtn">
+								<div class="stateBtnDis left">검거</div>
+								<div class="stateBtnDis right">정상</div>
+								<div class="stHandle"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="close"></div>
+				</div>
+			</div>
+			<article>
+				<table id="myDummyTable" class="tablesorter" border="0">
+					<thead>
+						<tr class="title">
+							<th id="hType">상태</th>
+							<th id="hName">이름</th>
+							<th id="hNum">군번</th>
+							<th id="hDate">전역일</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td id="type">0</td>
+							<td id="name">이동준</td>
+							<td id="num">20-12345678</td>
+							<td id="date">2021.11.14</td>
+						</tr>
+						<tr>
+							<td id="type">0</td>
+							<td id="name">김대유</td>
+							<td id="num">20-91234567</td>
+							<td id="date">2021.5.1</td>
+						</tr>
+
+						<tr>
+							<td id="type">1</td>
+							<td id="name">정종우</td>
+							<td id="num">20-89123456</td>
+							<td id="date">2021.4.1</td>
+						</tr>
+
+						<tr>
+							<td id="type">0</td>
+							<td id="name">다른사람</td>
+							<td id="num">19-12345678</td>
+							<td id="date">2020.11.14</td>
+						</tr>
+
+						<tr>
+							<td id="type">1</td>
+							<td id="name">어느사람</td>
+							<td id="num">18-12345678</td>
+							<td id="date">2019.8.4</td>
+						</tr>
+
+						<tr>
+							<td id="type">0</td>
+							<td id="name">사람임</td>
+							<td id="num">17-12345678</td>
+							<td id="date">2018.8.4</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		aaa
+		<footer>
+		</footer>
+		<div class="scrollHeader">
+			<div class="scrollBtn time">
+				<img src="img/wTime.png" alt="time setting butten">
+			</div>
+			<div class="subTitle">전투지휘훈련단</div>
+			<div class="scrollBtn refresh">
+				<img src="img/wRefresh.png" alt="retresh butten">
+			</div>
+			
+			<div class="preview">
+				<div class="preText current"></div>
+				<div class="totalColor"></div>
+				<div class="preText total"></div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="goToTop">
+		<div class="fullArrows">
+			<div class="arrow1">
+				<div class="A1"></div>
+				<div class="A2"></div>
+			</div>
+			<div class="arrow2">
+				<div class="DArrows1">
+					<div class="A1"></div>
+					<div class="A2"></div>
+				</div>
+				<div class="DArrows2">
+					<div class="A1"></div>
+					<div class="A2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

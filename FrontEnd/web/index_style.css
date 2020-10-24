@@ -1,0 +1,359 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select:none;
+}
+
+body {
+	-webkit-text-size-adjust:none;
+}
+/* BASIC */
+html {
+	margin:0; padding:0;
+} 
+
+html {
+	overflow-y:scroll;
+} 
+body, p, ul, ol, li, dl, dt, dd, form, table, th, td, fieldset, input, textarea, select, button, h1, h2, h3, h4, h5, h6, pre {
+	margin:0; 
+	padding:0; 
+	-webkit-text-size-adjust:none; 
+	font-family: "돋움", Dotum, Droid Sans, AppleSDGothicNeo, AppleGothic, Helvetica, Sans-serif; 
+} 
+body, input, textarea, select, button {
+	color:#585858; 
+	font-size:12px; 
+	font-family: Dotum; 
+}
+header, footer, nav, aside, section, article {
+	display:block;
+}
+fieldset, img {
+	border:0;
+} 
+img {
+	-ms-interpolation-mode:bicubic !important; 
+	border:0;
+} 
+table {
+	padding:0; 
+	border-spacing:0px; 
+	border:0; 
+	border-collapse:collapse;
+}
+ul, ol {
+	list-style:none;
+}
+a {
+	color:#585858; 
+	text-decoration:none;
+} 
+a:link {
+	color:#606060; 
+	text-decoration:none;
+}
+a:hover {
+	color:#ffa172;
+} 
+.clear { 
+	clear:both; 
+}
+
+body{
+	overflow: hidden;
+}
+
+html, body {
+	height: 100%;
+	color: #faf4ec;
+}
+
+#wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.backgraund{
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+	height: 100%;
+    background-image: url("https://source.unsplash.com/category/nature/1600x900");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.backColor{
+	position: absolute;
+	z-index: -9;
+	width: 100%;
+	height: 100%;
+	background-color: #222;
+	opacity: 0.5;
+}
+.dot{
+	position: absolute;
+	z-index: -8;
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(#000 30%, transparent 0), radial-gradient(#000 30%, transparent 0);
+	background-position: 0 0, 20px 20px;
+	background-size: 5px 5px;
+}
+.titleBox{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 40%;
+}
+.title{
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 7em;
+	color: #faf4ec;
+	letter-spacing: 100px;
+	margin-right:-100px;
+}
+.subTitle{
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #faf4ec;
+	letter-spacing: 10px;
+	margin-right:-10px;
+}
+.belong{
+	z-index: 0;
+}
+
+/*드롭다운 박스 스타일*/
+.select-box {
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2em;
+	letter-spacing: 2px;
+    width: 300px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+	transform: translate(-50%, 0);
+    z-index: 500;
+}
+
+.select-box .options-container {
+    background: linear-gradient(to right, #2a8d7a, #604593);
+    max-height: 0;
+    width: 100%;
+    transition: all 0.4s;
+    border-radius: 1.6em;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background: linear-gradient(to right, #36bea9, #af7ee0);
+    border-radius: 1.6em;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    right: 10px;
+    top: 5px;
+
+    transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+    max-height: 250px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -6.5px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    background: #4b2f6c;
+    border-radius: 0 1.6em 1.6em 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #84819d;
+    border-radius: 0 1.6em 1.6em 0;
+}
+
+.select-box .option, .selected {
+    padding: 10px ;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #85a3ac;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+/*패스워드 스타일*/
+.pw{ 
+    position: absolute;
+    background: linear-gradient(to right, #36bea9, #af7ee0);
+    text-align: center;
+	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 177%;
+    color: #fff;
+    width: 300px;
+    height: 40px;
+    font-size: 1.2em;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-style: none;
+    border-radius: 20px;
+    letter-spacing: 10px;
+    margin-right: -10px;
+}
+.pw::placeholder{
+    color: #fff;
+    letter-spacing: 2px;
+}
+.pw:focus{
+    outline:none;
+    background: #faf4ec;
+	border: none;
+    width: 294px;
+    height: 34px;
+    color: black;
+}
+.pwBorder{
+    position: absolute;
+    left: 50%;
+    top: 177%;
+	transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    background: linear-gradient(to right, #36bea9, #af7ee0);
+    z-index: -5;
+}
+
+/*경고 메시지*/
+.error{
+    color: #fd0d4d;
+    font-size: 1.2em;
+    font-weight: bolder;
+    position: absolute;
+    width: 100%;
+}
+
+.error > p{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 0);
+    top: 125px;
+    left: 50%;
+    background-color: rgb(34, 34, 34, 0.75);
+}
+.noneID{
+    display: none;
+}
+.nonePW{
+    display: none;
+}
+
+/*버튼*/
+.special{
+	width: 170px;
+	height: 40px;
+    font-weight: bolder;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%; 
+    top: 240%;
+	border-radius: 20px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+    z-index: -100;
+	transition: 1s;
+}
+.special > .specialBG{
+	width: 180%;
+	height: 100%;
+	background: linear-gradient(to right, #36bea9, #af7ee0, #61a287);
+	position: absolute;
+	left: 0;
+	transition: .3s;
+}
+.special > p{
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 5px;
+    margin-right: -5px;
+	line-height: 40px;
+	position: relative;
+	font-size: 1.2em;
+	top: 0;
+	transition: all .3s;
+	
+}
+.special:hover > .specialBG{
+	left: -80%;
+	
+}
+.special:hover > p{
+	top: -100%;
+}
+
+/*국방부 로고*/
+.logo{
+    position: absolute;
+    width: 150px;
+	transform: translate(-50%, -50%);
+    bottom: 0.5%;
+    left: 50%;
+	z-index: -1;
+}
+
+/*제작자*/
+.producer{
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 1%;
+    top: 50%;
+}
+
+/*카피라이트*/
+.Copyright{
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 1%;
+    top: 50%;
+}
