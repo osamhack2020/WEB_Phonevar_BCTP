@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="script/pgTitle.js"></script>
+    <script src="script/login.js"></script>
+
+    <link rel="stylesheet" href="index_style.css">
+
+    <title>폰바 : 로그인</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="backgraund"></div>
+        <div class="backColor"></div>
+        <div class="dot"></div>
+
+        <div class="titleBox">
+            <h1 class="title">폰바</h1>
+
+            <h2 class="subTitle">휴대폰 바이라는 뜻</h2>
+
+            <div class="select-box">
+                <div class="options-container">
+                    <div class="option">
+                        <input type="radio" class="radio" id="0" name="belong" />
+                        <label for="전투지휘훈련단">전투지휘훈련단</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="1" name="category" />
+                        <label for="몇_연대">몇 연대</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="2" name="category" />
+                        <label for="몇_사단">몇 사단</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="3" name="category" />
+                        <label for="기타등등_여러가지들">기타등등 여러가지들</label>
+                    </div>
+                </div>
+                <div class="selected">소속 선택</div>
+            </div>
+
+            <input class="pw" type="password" name="psw" placeholder="비밀번호 입력" onfocus="this.placeholder = ''">
+            <div class="pwBorder"></div>
+
+            <div class="error">
+                <p class="noneID">소속을 선택해 주십시오.</p>
+                <p class="nonePW">비밀번호를 확인해주십시오.</p>
+            </div>
+
+            <div id="login" class="special">
+                <div class="specialBG"></div>
+                <p>
+                    관리자
+                    <br>
+                    접속
+                </p>
+            </div>
+        </div>
+
+        <img class="logo" src="img/korMoND.gif" alt="korMoND">
+
+        <div class="producer">전투지휘훈련단 김대유, 이동준, 정종우</div>
+
+        <div class="Copyright">Copyright 2020. JunBeul. All rights reserved.</div>
+    </div>
+
+    <script src="script/select.js"></script>
+</body>
+
+</html>
