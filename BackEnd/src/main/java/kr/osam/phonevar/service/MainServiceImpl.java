@@ -72,6 +72,12 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
+    public List<UnitInfo> getUnitList() {
+
+        return unitInfoMapper.getUnitList();
+    }
+
+    @Override
     public String sendFcmMessage(String targetToken) throws IOException {
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder()

@@ -21,4 +21,6 @@ public interface MainService {
     User updateUser(User user);
 
     HashMap<String, Object> createUserLog(HashMap<String, Object> data);
+
+    List<UnitInfo> getUnitList();
 }
