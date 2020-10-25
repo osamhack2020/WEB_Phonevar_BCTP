@@ -1,20 +1,33 @@
 package kr.osam.phonevar.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.Date;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
     private Integer id;
     private String serviceNumber;
     private String name;
     private String organization;
     private String phoneNumber;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
     private Date dischargeDate;
-    private Integer unitCode;
+    private Integer unitId;
+    private Integer statusCode;
+    private String deviceUUID;
+    private Boolean isDeleted;
+    @JsonIgnore
     private Date createdAt;
+    @JsonIgnore
     private Date updatedAt;
+    // JWT Token
+    private String token;
     
     public Integer getId() {
-        return this.id;
+        return id;
     }
     
     public void setId(Integer id) {
@@ -22,7 +35,7 @@ public class User {
     }
     
     public String getServiceNumber() {
-        return this.serviceNumber;
+        return serviceNumber;
     }
     
     public void setServiceNumber(String serviceNumber) {
@@ -30,7 +43,7 @@ public class User {
     }
     
     public String getName() {
-        return this.name;
+        return name;
     }
     
     public void setName(String name) {
@@ -38,7 +51,7 @@ public class User {
     }
     
     public String getOrganization() {
-        return this.organization;
+        return organization;
     }
     
     public void setOrganization(String organization) {
@@ -46,7 +59,7 @@ public class User {
     }
     
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return phoneNumber;
     }
     
     public void setPhoneNumber(String phoneNumber) {
@@ -54,23 +67,47 @@ public class User {
     }
     
     public Date getDischargeDate() {
-        return this.dischargeDate;
+        return dischargeDate;
     }
     
     public void setDischargeDate(Date dischargeDate) {
         this.dischargeDate = dischargeDate;
     }
-    
-    public Integer getUnitCode() {
-        return this.unitCode;
+
+    public Integer getUnitId() {
+        return unitId;
     }
-    
-    public void setUnitCode(Integer unitCode) {
-        this.unitCode = unitCode;
+
+    public void setUnitId(Integer unitId) {
+        this.unitId = unitId;
     }
-    
+
+    public Integer getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+    }
+
+    public String getDeviceUUID() {
+        return deviceUUID;
+    }
+
+    public void setDeviceUUID(String deviceUUID) {
+        this.deviceUUID = deviceUUID;
+    }
+
+    public Boolean getIsDeleted() {
+        return isDeleted;
+    }
+
+    public void setIsDeleted(Boolean isDeleted) {
+        this.isDeleted = isDeleted;
+    }
+
     public Date getCreatedAt() {
-        return this.createdAt;
+        return createdAt;
     }
     
     public void setCreatedAt(Date createdAt) {
@@ -78,28 +115,54 @@ public class User {
     }
     
     public Date getUpdatedAt() {
-        return this.updatedAt;
+        return updatedAt;
     }
     
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-}
 
-/*
-CREATE TABLE `phonevar`.`user` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `serviceNumber` VARCHAR(20) NOT NULL,
-  `name` VARCHAR(10) NOT NULL,
-  `organization` VARCHAR(255) NULL DEFAULT NULL,
-  `phoneNumber` VARCHAR(15) NULL DEFAULT NULL,
-  `dischargeDate` TIMESTAMP NOT NULL,
-  `unitCode` INT(10) NULL DEFAULT NULL,
-  `isDeleted` TINYINT(1) NOT NULL DEFAULT '0',
-  `createdAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_bin;
-*/
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public void update(User user) {
+        if (user.serviceNumber != null) {
+            this.serviceNumber = user.serviceNumber;
+        }
+        if (user.name != null) {
+            this.name = user.name;
+        }
+        if (user.organization != null) {
+            this.organization = user.organization;
+        }
+        if (user.phoneNumber != null) {
+            this.phoneNumber = user.phoneNumber;
+        }
+        if (user.dischargeDate != null) {
+            this.dischargeDate = user.dischargeDate;
+        }
+        if (user.unitId != null) {
+            this.unitId = user.unitId;
+        }
+        if (user.statusCode != null) {
+            this.statusCode = user.statusCode;
+        }
+    }
+
+    public void update(UserMinified userMinified) {
+        if (userMinified.getServiceNumber() != null) {
+            this.serviceNumber = userMinified.getServiceNumber();
+        }
+        if (userMinified.getName() != null) {
+            this.name = userMinified.getName();
+        }
+        if (userMinified.getDeviceUUID() != null) {
+            this.deviceUUID = userMinified.getDeviceUUID();
+        }
+    }
+}
