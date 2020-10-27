@@ -107,7 +107,7 @@ public class MainServiceImpl implements MainService {
                             "부정행위 감지",
                             user.getOrganization() + " 소속 " + user.getName() + "의 부정행위가 감지되었습니다."
                     ).build()
-            ).token(unitInfo.toString()).build());
+            ).topic(unitInfo.toString()).build());
         }
 
         return new HashMap<String, Object> () {{
