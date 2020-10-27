@@ -2,21 +2,27 @@ package kr.osam.phonevar.domain;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import io.swagger.annotations.ApiModelProperty;
 
 @JsonInclude(Include.NON_NULL)
 public class UserLog {
+    @JsonIgnore
     private Integer id;
+    @JsonIgnore
     private Integer userId;
-    private String serviceNumber;
-    private String name;
-    private Integer statusCode;
+    private Integer logType;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
+    private Date loggedAt;
+    @ApiModelProperty(hidden = true)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     private Date createdAt;
-    private Date updatedAt;
     
     public Integer getId() {
-        return this.id;
+        return id;
     }
     
     public void setId(Integer id) {
@@ -24,63 +30,34 @@ public class UserLog {
     }
     
     public Integer getUserId() {
-        return this.userId;
+        return userId;
     }
     
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
-    
-    public String getServiceNumber() {
-        return this.serviceNumber;
+
+    public Integer getLogType() {
+        return logType;
     }
-    
-    public void setServiceNumber(String serviceNumber) {
-        this.serviceNumber = serviceNumber;
+
+    public void setLogType(Integer logType) {
+        this.logType = logType;
     }
-    
-    public String getName() {
-        return this.name;
+
+    public Date getLoggedAt() {
+        return loggedAt;
     }
-    
-    public void setName(String name) {
-        this.name = name;
+
+    public void setLoggedAt(Date loggedAt) {
+        this.loggedAt = loggedAt;
     }
-    
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-    
-    public void setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
-    }
-    
+
     public Date getCreatedAt() {
-        return this.createdAt;
+        return createdAt;
     }
     
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
-    
-    public Date getUpdatedAt() {
-        return this.updatedAt;
-    }
-    
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }
-
-/*
-CREATE TABLE `phonevar`.`userlog` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `userId` INT(10) NOT NULL,
-  `statusCode` INT(5) NULL DEFAULT NULL,
-  `createdAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_bin;
-*/
