@@ -46,22 +46,22 @@
 ---
 ## 기술 스택 (Technique Used)
 * Server(back-end)
- - Spring Framework 4
- - MySQL 5.6
- - Firebase
- - Swagger 2
- - Mybatis
- - OkHttp 3
- - JWT
- - Jackson 2.11
+ * Spring Framework 4
+ * MySQL 5.6
+ * Firebase
+ * Swagger 2
+ * Mybatis
+ * OkHttp 3
+ * JWT
+ * Jackson 2.11
 
 * front-end
- - jquery-3.5.1
- - tablesorter-2.9.1
+ * jquery-3.5.1
+ * tablesorter-2.9.1
  
 * App
- - Intent Service
- - firebase cloud messaging
+ * Intent Service
+ * firebase cloud messaging
 <br>
 
 ---
