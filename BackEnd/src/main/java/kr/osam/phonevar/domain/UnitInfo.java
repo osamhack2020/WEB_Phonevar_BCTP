@@ -1,5 +1,6 @@
 package kr.osam.phonevar.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -7,6 +8,7 @@ public class UnitInfo {
     private Integer id;
     private Integer unitCode;
     private String unitName;
+    @JsonIgnore
     private Boolean isDeleted;
 
     public Integer getId() {

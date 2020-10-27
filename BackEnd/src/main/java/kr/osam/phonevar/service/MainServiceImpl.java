@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 
@@ -44,9 +43,9 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
-    public List<UserLog> getUserLog(Integer id) {
+    public UserLogList getUserLogList(Integer id) {
 
-        return userLogMapper.getUserLog(id);
+        return new UserLogList(id, userLogMapper.getUserLog(id));
     }
 
     @Override
@@ -64,14 +63,47 @@ public class MainServiceImpl implements MainService {
         User nowUser = userMapper.getUserById(user.getId());
         nowUser.update(user);
         userMapper.updateUser(nowUser);
+        nowUser.setToken(jwtFactory.encodeJwtWithUser(nowUser));
 
         return nowUser;
     }
 
     @Override
-    public HashMap<String, Object> createUserLog(HashMap<String, Object> data) {
-        // ToDo: 로그 전송받으면 검증 및 기록하는 기능 추가 + 토큰 검증
-        return null;
+    public HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList) {
+        // 토큰 검증
+        if (!authorization.startsWith("Bearer ")) {
+            return new HashMap<String, Object> () {{
+                put("success", false);
+            }};
+        }
+
+        String jwtToken = authorization.substring(7);
+        UserMinified userMinified = jwtFactory.decodeJwt(jwtToken);
+        User user = userMapper.getUserByServiceNumberAndName(userMinified);
+
+        if (!userLogList.getUserId().equals(user.getId())) {
+            return new HashMap<String, Object> () {{
+                put("success", false);
+            }};
+        }
+        
+        // 로그 생성
+        List<UserLog> userLogs = userLogList.getUserLogs();
+        
+        for (UserLog userLog : userLogs) {
+            userLog.setUserId(userLogList.getUserId());
+            userLogMapper.createUserLog(userLog);
+        }
+
+        // 로그가 있었다면 상태 코드를 위험으로 변경
+        if (userLogs.size() > 0) {
+            user.setStatusCode(400);
+            userMapper.updateUser(user);
+        }
+
+        return new HashMap<String, Object> () {{
+            put("success", true);
+        }};
     }
 
     @Override
@@ -110,6 +142,4 @@ public class MainServiceImpl implements MainService {
 
         return unitInfoMapper.getUnitInfoByName(unitName);
     }
-
-
 }

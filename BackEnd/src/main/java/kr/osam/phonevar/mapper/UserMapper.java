@@ -7,11 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("userMapper")
 public interface UserMapper {
-    @Insert("INSERT INTO phonevar.user (deviceUUID) VALUES (#{deviceUUID})")
-    @Options(useGeneratedKeys = true, keyProperty = "id")
-    @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = int.class)
-    User registerDevice(UserMinified userMinified);
-
     @Select("SELECT * FROM phonevar.user WHERE id = #{id} AND isDeleted = 0")
     User getUserById(@Param("id") int id);
 

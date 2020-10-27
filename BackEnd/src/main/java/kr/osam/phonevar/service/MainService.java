@@ -7,7 +7,7 @@ import java.util.List;
 import kr.osam.phonevar.domain.*;
 
 public interface MainService {
-    List<UserLog> getUserLog(Integer id);
+    UserLogList getUserLogList(Integer id);
 
     String sendFcmMessage(Message message) throws IOException;
 
@@ -17,7 +17,7 @@ public interface MainService {
 
     User updateUser(User user);
 
-    HashMap<String, Object> createUserLog(HashMap<String, Object> data);
+    HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList);
 
     List<UnitInfo> getUnitList();
 }

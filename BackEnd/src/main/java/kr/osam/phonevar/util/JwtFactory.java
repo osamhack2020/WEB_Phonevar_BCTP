@@ -28,14 +28,16 @@ public class JwtFactory {
         try {
             DecodedJWT decodedJWT = JWT.decode(jwt);
             String serviceNumber = decodedJWT.getClaim("serviceNumber").asString();
+            byte[] bytes = serviceNumber.getBytes(StandardCharsets.UTF_8);
 
-            Algorithm algorithm = Algorithm.HMAC256(Base64.getDecoder().decode(serviceNumber));
+            Algorithm algorithm = Algorithm.HMAC256(Base64.getEncoder().encode(bytes));
             Verification jwtVerifier = JWT.require(algorithm);
 
-            userMinified.setName(decodedJWT.getClaim("name").asString());;
+            userMinified.setName(decodedJWT.getClaim("name").asString());
             userMinified.setServiceNumber(serviceNumber);
         }
         catch (JWTVerificationException ignored) { }
+
         return userMinified;
     }
 }

@@ -22,9 +22,9 @@ public class MainController {
 
     @ApiOperation(value = "특정 유저의 로깅 기록 불러오기")
     @RequestMapping(value = "/user/{id}/log", method = RequestMethod.GET)
-    public List<UserLog> getUserLog(@PathVariable Integer id) {
+    public UserLogList getUserLog(@PathVariable Integer id) {
 
-        return mainService.getUserLog(id);
+        return mainService.getUserLogList(id);
     }
 
     @ApiOperation(value = "기기 등록")
@@ -36,7 +36,7 @@ public class MainController {
 
     @ApiOperation(value = "특정 유저의 정보 변경하기")
     @RequestMapping(value = "/user", method = RequestMethod.PUT)
-    public User changeUserStatusCode(@RequestBody User user) {
+    public User updateUser(@RequestBody User user) {
 
         return mainService.updateUser(user);
     }
@@ -64,8 +64,8 @@ public class MainController {
 
     @ApiOperation(value = "로그 전송")
     @RequestMapping(value = "/user/log", method = RequestMethod.POST)
-    public HashMap<String, Object> createUserLog(@RequestBody HashMap<String, Object> data) {
+    public HashMap<String, Object> createUserLog(@RequestHeader(value = "Authorization") String authorization, @RequestBody UserLogList userLogList) {
 
-        return mainService.createUserLog(data);
+        return mainService.createUserLogs(authorization, userLogList);
     }
 }
