@@ -4,15 +4,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import kr.osam.phonevar.domain.UnitInfo;
-import kr.osam.phonevar.domain.User;
-import kr.osam.phonevar.domain.UserLog;
-import kr.osam.phonevar.domain.UserMinified;
+import kr.osam.phonevar.domain.*;
 
 public interface MainService {
     List<UserLog> getUserLog(Integer id);
 
-    String sendFcmMessage(String targetToken) throws IOException;
+    String sendFcmMessage(Message message) throws IOException;
 
     UnitInfo getUnitInfoByName(String unitName);
 

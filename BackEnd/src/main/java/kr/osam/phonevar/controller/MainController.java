@@ -1,10 +1,7 @@
 package kr.osam.phonevar.controller;
 
-import io.swagger.annotations.ApiOperation;
-import kr.osam.phonevar.domain.UnitInfo;
-import kr.osam.phonevar.domain.User;
-import kr.osam.phonevar.domain.UserLog;
-import kr.osam.phonevar.domain.UserMinified;
+import io.swagger.annotations.*;
+import kr.osam.phonevar.domain.*;
 import kr.osam.phonevar.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -44,11 +41,11 @@ public class MainController {
         return mainService.updateUser(user);
     }
 
-    @ApiOperation(value = "특정 부대의 간부들에게 푸시 알림 전송")
-    @RequestMapping(value = "/fcm", method = RequestMethod.GET)
-    public String sendFcmMessage() throws IOException {
+    @ApiOperation(value = "특정 부대의 간부들 또는 한 명에게 푸시 알림 전송")
+    @RequestMapping(value = "/fcm", method = RequestMethod.POST)
+    public String sendFcmMessage(@RequestBody Message message) throws IOException {
 
-        return null;
+        return mainService.sendFcmMessage(message);
     }
 
     @ApiOperation(value = "부대 목록 반환")

@@ -19,12 +19,15 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 
 @Service("mainService")
 public class MainServiceImpl implements MainService {
     private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final OkHttpClient okHttpClient = new OkHttpClient();
+    private static final String PROJECT_URL = "https://fcm.googleapis.com/v1/projects/phonevar-8799e/messages:send";
     private final UserLogMapper userLogMapper;
     private final FireBaseCloudMessage fireBaseCloudMessage;
     private final UnitInfoMapper unitInfoMapper;
@@ -78,11 +81,10 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
-    public String sendFcmMessage(String targetToken) throws IOException {
-        OkHttpClient okHttpClient = new OkHttpClient();
+    public String sendFcmMessage(Message message) throws IOException {
         Request request = new Request.Builder()
-                .url("https://fcm.googleapis.com/v1/projects/phonevar-8799e/messages:send")
-                .post(RequestBody.create(makeFcmMessage(targetToken), okhttp3.MediaType.parse("application/json; charset=utf-8")))
+                .url(PROJECT_URL)
+                .post(RequestBody.create(makeFcmMessage(message), okhttp3.MediaType.parse("application/json; charset=utf-8")))
                 .addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + fireBaseCloudMessage.getAccessToken())
                 .addHeader(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_UTF8_VALUE)
                 .build();
@@ -90,18 +92,15 @@ public class MainServiceImpl implements MainService {
         return Objects.requireNonNull(okHttpClient.newCall(request).execute().body()).string();
     }
 
-    private String makeFcmMessage(String targetToken) throws JsonProcessingException {
-        FcmMessage fcmMessage = new FcmMessage();
-        FcmMessage.Message message = new FcmMessage.Message();
-        FcmMessage.Notification notification = new FcmMessage.Notification();
-
-        notification.setTitle("부정행위 의심자 발생");
-        notification.setBody("3소대 3분대 A병사가 부정행위 의심자로 등록되었습니다.");
-
-        message.setNotification(notification);
-        message.setTopic("101");
-
-        fcmMessage.setMessage(message);
+    private String makeFcmMessage(Message message) throws JsonProcessingException {
+        FcmMessage fcmMessage = new FcmMessage.FcmMessageBuilder(
+                new Message.MessageBuilder(
+                        new Notification.NotificationBuilder(
+                                message.getNotification().getTitle(),
+                                message.getNotification().getBody()
+                        ).build()
+                ).topic(message.getTopic()).build()
+        ).build();
 
         return objectMapper.writeValueAsString(fcmMessage);
     }

@@ -1,82 +1,37 @@
 package kr.osam.phonevar.domain;
 
 public class FcmMessage {
-    private Boolean validateOnly;
-    private Message message;
+    private final Boolean validateOnly;
+    private final Message message;
 
-    public Boolean getValidateOnly() {
-        return this.validateOnly;
+    private FcmMessage(FcmMessageBuilder builder) {
+        this.validateOnly = builder.validateOnly;
+        this.message = builder.message;
     }
 
-    public void setValidateOnly(Boolean validateOnly) {
-        this.validateOnly = validateOnly;
+    public Boolean getValidateOnly() {
+        return validateOnly;
     }
 
     public Message getMessage() {
-        return this.message;
+        return message;
     }
 
-    public void setMessage(Message message) {
-        this.message = message;
-    }
+    public static class FcmMessageBuilder {
+        private final Message message;
+        private Boolean validateOnly = false;
 
-    public static class Message {
-        private Notification notification;
-        private String token;
-        private String topic;
-
-        public Notification getNotification() {
-            return notification;
+        public FcmMessageBuilder(Message message) {
+            this.message = message;
         }
 
-        public void setNotification(Notification notification) {
-            this.notification = notification;
+        public FcmMessageBuilder validateOnly(Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
         }
 
-        public String getToken() {
-            return token;
-        }
-
-        public void setToken(String token) {
-            this.token = token;
-        }
-
-        public String getTopic() {
-            return topic;
-        }
-
-        public void setTopic(String topic) {
-            this.topic = topic;
-        }
-    }
-
-    public static class Notification {
-        private String title;
-        private String body;
-        private String image;
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getBody() {
-            return body;
-        }
-
-        public void setBody(String body) {
-            this.body = body;
-        }
-
-        public String getImage() {
-            return image;
-        }
-
-        public void setImage(String image) {
-            this.image = image;
+        public FcmMessage build() {
+            return new FcmMessage(this);
         }
     }
 }
