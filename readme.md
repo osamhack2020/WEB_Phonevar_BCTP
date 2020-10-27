@@ -56,6 +56,8 @@
   * Jackson 2.11
 
 * front-end
+  * javascript
+  * html5
   * jquery-3.5.1
   * tablesorter-2.9.1
  
