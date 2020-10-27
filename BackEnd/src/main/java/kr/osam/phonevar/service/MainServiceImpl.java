@@ -69,7 +69,7 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
-    public HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList) {
+    public HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList) throws IOException {
         // 토큰 검증
         if (!authorization.startsWith("Bearer ")) {
             return new HashMap<String, Object> () {{
@@ -96,9 +96,18 @@ public class MainServiceImpl implements MainService {
         }
 
         // 로그가 있었다면 상태 코드를 위험으로 변경
+        // 간부들에게 푸시 알림 전송
         if (userLogs.size() > 0) {
             user.setStatusCode(400);
             userMapper.updateUser(user);
+
+            Integer unitInfo = unitInfoMapper.getUnitCodeById(user.getUnitId());
+            sendFcmMessage(new Message.MessageBuilder(
+                    new Notification.NotificationBuilder(
+                            "부정행위 감지",
+                            user.getOrganization() + " 소속 " + user.getName() + "의 부정행위가 감지되었습니다."
+                    ).build()
+            ).token(unitInfo.toString()).build());
         }
 
         return new HashMap<String, Object> () {{
@@ -116,7 +125,7 @@ public class MainServiceImpl implements MainService {
     public String sendFcmMessage(Message message) throws IOException {
         Request request = new Request.Builder()
                 .url(PROJECT_URL)
-                .post(RequestBody.create(makeFcmMessage(message), okhttp3.MediaType.parse("application/json; charset=utf-8")))
+                .post(RequestBody.create(objectMapper.writeValueAsString(makeFcmMessage(message)), okhttp3.MediaType.parse("application/json; charset=utf-8")))
                 .addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + fireBaseCloudMessage.getAccessToken())
                 .addHeader(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_UTF8_VALUE)
                 .build();
@@ -124,8 +133,9 @@ public class MainServiceImpl implements MainService {
         return Objects.requireNonNull(okHttpClient.newCall(request).execute().body()).string();
     }
 
-    private String makeFcmMessage(Message message) throws JsonProcessingException {
-        FcmMessage fcmMessage = new FcmMessage.FcmMessageBuilder(
+    private FcmMessage makeFcmMessage(Message message) throws JsonProcessingException {
+
+        return new FcmMessage.FcmMessageBuilder(
                 new Message.MessageBuilder(
                         new Notification.NotificationBuilder(
                                 message.getNotification().getTitle(),
@@ -133,8 +143,18 @@ public class MainServiceImpl implements MainService {
                         ).build()
                 ).topic(message.getTopic()).build()
         ).build();
+    }
 
-        return objectMapper.writeValueAsString(fcmMessage);
+    private FcmMessage makeFcmMessage(String title, String body, String topic) throws JsonProcessingException {
+
+        return new FcmMessage.FcmMessageBuilder(
+                new Message.MessageBuilder(
+                        new Notification.NotificationBuilder(
+                                title,
+                                body
+                        ).build()
+                ).topic(topic).build()
+        ).build();
     }
 
     @Override

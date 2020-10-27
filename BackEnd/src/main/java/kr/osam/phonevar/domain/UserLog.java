@@ -14,6 +14,7 @@ public class UserLog {
     private Integer id;
     @JsonIgnore
     private Integer userId;
+    private Integer logType;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     private Date loggedAt;
     @ApiModelProperty(hidden = true)
@@ -34,6 +35,14 @@ public class UserLog {
     
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public Integer getLogType() {
+        return logType;
+    }
+
+    public void setLogType(Integer logType) {
+        this.logType = logType;
     }
 
     public Date getLoggedAt() {

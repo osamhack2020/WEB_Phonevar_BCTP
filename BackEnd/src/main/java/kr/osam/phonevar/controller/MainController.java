@@ -64,7 +64,7 @@ public class MainController {
 
     @ApiOperation(value = "로그 전송")
     @RequestMapping(value = "/user/log", method = RequestMethod.POST)
-    public HashMap<String, Object> createUserLog(@RequestHeader(value = "Authorization") String authorization, @RequestBody UserLogList userLogList) {
+    public HashMap<String, Object> createUserLog(@RequestHeader(value = "Authorization") String authorization, @RequestBody UserLogList userLogList) throws IOException {
 
         return mainService.createUserLogs(authorization, userLogList);
     }

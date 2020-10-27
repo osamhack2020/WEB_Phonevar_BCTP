@@ -17,7 +17,7 @@ public interface MainService {
 
     User updateUser(User user);
 
-    HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList);
+    HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList) throws IOException;
 
     List<UnitInfo> getUnitList();
 }
