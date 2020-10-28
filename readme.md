@@ -1,6 +1,6 @@
 
 ## Logo
-<img src = "./PPT/logo.png" width="100px">
+<img src = "./PPT/logo2.png" width="">
 
 ## 프로젝트 동영상
 ##### 준비중
@@ -124,6 +124,6 @@ $ 추후 추가
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
  
- 
 
+<img src = "./PPT/logo.png" width="100px">
 더 자세한 개발현황은 [https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e)에서 확인하시면 됩니다.
