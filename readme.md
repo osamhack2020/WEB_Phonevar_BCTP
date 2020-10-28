@@ -1,7 +1,6 @@
 
 ## Logo
-##### 준비중
-
+![logo](/PPT/logo.png){: width="100" height="100"}
 
 ## 프로젝트 동영상
 ##### 준비중
