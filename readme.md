@@ -1,6 +1,6 @@
 
 ## Logo
-![title](/PPT/logo.png){: width="100" height="100"}
+<img src = "./PPT/logo.png" width="100px">
 
 ## 프로젝트 동영상
 ##### 준비중
