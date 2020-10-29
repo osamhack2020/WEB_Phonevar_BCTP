@@ -279,7 +279,7 @@ html, body {
 }
 .log{
 	width: 760px;
-	height: 480px;
+	height: 450px;
 	position: absolute;
 	left: 50%;
 	top: 45%;
@@ -296,6 +296,42 @@ html, body {
 .log::-webkit-scrollbar-track {
 	border-radius: 10px;
 	border: 1px solid #748388;
+}
+/***로그 표시 테이블***/
+.lodTableHiden{
+    width: 720px;
+    height: 35px;
+    background-color: #ecf0f3;
+    position: absolute;
+    top: 63px;
+    z-index: 100;
+    left: 32px;
+}
+.logTable{
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 16px 30px;
+    font-size: 1.8em;
+}
+.logTable > thead{
+    
+}
+.logTable > thead > tr > th{
+    background: linear-gradient(to right bottom, #36bea9, #af7ee0);
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 100px;
+    color: #ecf0f3;
+    position: sticky;
+	top: 30px;
+    font-weight: bold;
+}
+.logTable > tbody > tr > td{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.logTable > tbody > tr > td#logType{
+    background-color: ;
+    border-radius: 100px;
 }
 /***상태변경버튼***/
 .stateChange{
