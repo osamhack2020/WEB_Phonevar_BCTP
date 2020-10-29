@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository("userMapper")
 public interface UserMapper {
-	@Select("SELECT * FROM phonevar.user WHERE isDeleted = 0")
-	List<User> getUserList();
+    @Select("SELECT * FROM phonevar.user WHERE isDeleted = 0")
+    List<User> getUserList();
 	
     @Select("SELECT * FROM phonevar.user WHERE id = #{id} AND isDeleted = 0")
     User getUserById(@Param("id") int id);
