@@ -62,6 +62,12 @@ public class MainController {
         return mainService.getUnitInfoByName(unitName);
     }
 
+	@ApiOperation(value = "유저 목록 불러오기")
+    @RequestMapping(value = "/user/list", method = RequestMethod.GET)
+    public List<User> getUserList() {
+        return mainService.getUserList();
+    }
+	
     @ApiOperation(value = "로그 전송")
     @RequestMapping(value = "/user/log", method = RequestMethod.POST)
     public HashMap<String, Object> createUserLog(@RequestHeader(value = "Authorization") String authorization, @RequestBody UserLogList userLogList) throws IOException {
