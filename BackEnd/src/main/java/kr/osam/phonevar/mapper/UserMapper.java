@@ -4,6 +4,7 @@ import kr.osam.phonevar.domain.User;
 import kr.osam.phonevar.domain.UserMinified;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository("userMapper")
 public interface UserMapper {
