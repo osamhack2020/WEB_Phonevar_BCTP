@@ -20,4 +20,6 @@ public interface MainService {
     HashMap<String, Object> createUserLogs(String authorization, UserLogList userLogList) throws IOException;
 
     List<UnitInfo> getUnitList();
+    
+    List<User> getUserList();
 }

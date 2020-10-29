@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository("userMapper")
 public interface UserMapper {
+    @Select("SELECT * FROM phonevar.user WHERE isDeleted = 0")
+    List<User> getUserList();
+	
     @Select("SELECT * FROM phonevar.user WHERE id = #{id} AND isDeleted = 0")
     User getUserById(@Param("id") int id);
 
@@ -15,4 +18,5 @@ public interface UserMapper {
 
     @Update("UPDATE phonevar.user SET serviceNumber = #{serviceNumber}, name = #{name}, organization = #{organization}, phoneNumber = #{phoneNumber}, dischargeDate = #{dischargeDate}, unitId = #{unitId}, statusCode = #{statusCode}, deviceUUID = #{deviceUUID} WHERE id = #{id}")
     void updateUser(User user);
+	
 }

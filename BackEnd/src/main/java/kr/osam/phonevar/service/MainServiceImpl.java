@@ -162,4 +162,10 @@ public class MainServiceImpl implements MainService {
 
         return unitInfoMapper.getUnitInfoByName(unitName);
     }
+	
+    @Override
+    public List<User> getUserList() {
+
+        return userMapper.getUserList();
+    }
 }
