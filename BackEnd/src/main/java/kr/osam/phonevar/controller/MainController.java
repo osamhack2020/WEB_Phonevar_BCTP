@@ -62,7 +62,7 @@ public class MainController {
         return mainService.getUnitInfoByName(unitName);
     }
 
-	@ApiOperation(value = "유저 목록 불러오기")
+    @ApiOperation(value = "유저 목록 불러오기")
     @RequestMapping(value = "/user/list", method = RequestMethod.GET)
     public List<User> getUserList() {
         return mainService.getUserList();
