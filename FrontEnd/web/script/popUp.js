@@ -110,7 +110,7 @@ function popup(){
 	$(".close").click(function () {
 		if (state == 1) {
 			data = {
-				"id": userId,
+				"id": userId.text(),
 				"statusCode": 200
 			}
 			console.log(data);
