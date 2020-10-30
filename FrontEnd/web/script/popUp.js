@@ -34,7 +34,7 @@ function popup(){
 		
 		var phonevarlogAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/" + userId.text() + "/log";
 		
-		$.getJSON( "./log.json", {
+		$.getJSON( phonevarlogAPI, {
 			format: "json"
 		})
 		.done(function( data ) {
