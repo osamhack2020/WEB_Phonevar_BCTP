@@ -1,4 +1,4 @@
-$(function () {
+function popup(){
 	$(".popUp").hide();
 
 	$(".time").click(function () {
@@ -83,5 +83,5 @@ $(function () {
 		}
 		$(".popUp").hide(1000, 'swing');
 	});
+}
 
-});
