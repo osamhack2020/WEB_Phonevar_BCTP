@@ -53,6 +53,7 @@
 			format: "json"
 		})
 		.done(function( data ) {
+		$('#list').html("");
 		$.each( data, function( i, item ) {
 			if(item.unitId == unitId){
 				if (item.statusCode == 200){
