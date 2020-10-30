@@ -1,6 +1,5 @@
 function tableintype() {
-    console.log(11);
-      var num = $('tr').length-1;
+      var num = $('article table tbody tr').length;
         var tbType = $('#myDummyTable tbody tr td#type');
         var badGay = 0;
 

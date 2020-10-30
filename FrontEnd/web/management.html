@@ -25,39 +25,72 @@
 	<title>폰바 : 휴대폰 관리</title>
 
     <script>
-		var phonevarAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/list";
-		var data2 = [];
+		
+		
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    	}
+		
+		var unitId = 1;
+		var phonevaruserAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/list";
+		var phonevarunitAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit";
+		var unitName = getParameterByName("unitName")
+		
+		$.getJSON( phonevarunitAPI, {
+			name:unitName,
+			format: "json"
+		})
+		.done(function( data ) {
+			console.log(data);
+			unitId = data.id;
+		});
+		
+		
 		$.getJSON( "./data.json", {
 			format: "json"
 		})
 		.done(function( data ) {
-		data2 = data
 		$.each( data, function( i, item ) {
-			if (item.statusCode == 200){
-				var $tr = $('<tr></tr>').append(
-					$('<td>').attr( "id", "type" ).text("0"),
-					$('<td>').attr( "id", "name" ).text(item.name),
-					$('<td>').attr( "id", "num" ).text(item.serviceNumber),
-					$('<td>').attr( "id", "date" ).text(item.dischargeDate),
-				);
-				$('#list').append($tr);
-			}else{
-				var $tr = $('<tr>').append(
-					$('<td>').attr( "id", "type" ).text("1"),
-					$('<td>').attr( "id", "name" ).text(item.name),
-					$('<td>').attr( "id", "num" ).text(item.serviceNumber),
-					$('<td>').attr( "id", "date" ).text(item.dischargeDate),
-				);
-				$('#list').append($tr);
+			if(item.unitId == unitId){
+				if (item.statusCode == 200){
+					var $tr = $('<tr></tr>').append(
+						$('<td>').attr( "id", "type" ).text("0"),
+						$('<td>').attr( "id", "name" ).text(item.name),
+						$('<td>').attr( "id", "num" ).text(item.serviceNumber),
+						$('<td>').attr( "id", "date" ).text(item.dischargeDate),
+						$('<td>').attr( "id", "id" ).text(item.id).hide()
+					);
+					$('#list').append($tr);
+				}else{
+					var $tr = $('<tr>').append(
+						$('<td>').attr( "id", "type" ).text("1"),
+						$('<td>').attr( "id", "name" ).text(item.name),
+						$('<td>').attr( "id", "num" ).text(item.serviceNumber),
+						$('<td>').attr( "id", "date" ).text(item.dischargeDate),
+						$('<td>').attr( "id", "id" ).text(item.id).hide()
+					);
+					$('#list').append($tr);
+				}
 			}
 		});
 			tableintype();
 			popup();
+			sorter();
+			$('#unitName').text(unitName);
+			
+			
+			if($(list).children().length == 0){
+				$('#nodata').text("데이터가 없습니다.");
+			}
+			
         });
-        
-        
-        
-        
+		
+		
+		
+		
     </script>
     
 </head>
@@ -67,7 +100,7 @@
 		<header>
 			<div class="titleBox">
 				<h1 class="mainTitle">폰바</h1>
-				<h2 class="subTitle">전투지휘훈련단</h2>
+				<h2 class="subTitle" id="unitName">전투지휘훈련단</h2>
 
 				<div class="btnBox">
 					<div class="btn time">
@@ -132,8 +165,20 @@
 							<div class="sContent sNum"></div>
 							<div class="sContent sDate"></div>
 						</div>
+						<div class="lodTableHiden"></div>
 						<div class="log">
-							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							<table class="logTable">
+								<thead>
+									<tr>
+										<th id="hlogType">상태</th>
+										<th id="hlogStartTime">사용시간</th>
+										<th id="hlogendTime">서버기록시간</th>
+									</tr>
+								</thead>
+								<tbody id="loglist">
+								</tbody>
+							</table>
+							<div id="nologdata" class="subTitle" style="text-align: center;"></div>
 						</div>
 						<div class="stateChange">
 							<p>상태 변경</p>
@@ -149,7 +194,7 @@
 				</div>
 			</div>
 			<article>
-				<table id="myDummyTable" class="tablesorter" border="0">
+				<table id="myDummyTable" class="" border="0">
 					<thead>
 						<tr class="title">
 							<th id="hType">상태</th>
@@ -160,53 +205,14 @@
 					</thead>
 
 					<tbody id="list">
-						<tr>
-							<td id="type">0</td>
-							<td id="name">이동준</td>
-							<td id="num">20-12345678</td>
-							<td id="date">2021.11.14</td>
-						</tr>
-						<tr>
-							<td id="type">0</td>
-							<td id="name">김대유</td>
-							<td id="num">20-91234567</td>
-							<td id="date">2021.5.1</td>
-						</tr>
-
-						<tr>
-							<td id="type">0</td>
-							<td id="name">정종우</td>
-							<td id="num">20-89123456</td>
-							<td id="date">2021.4.1</td>
-						</tr>
-
-						<tr>
-							<td id="type">0</td>
-							<td id="name">다른사람</td>
-							<td id="num">19-12345678</td>
-							<td id="date">2020.11.14</td>
-						</tr>
-
-						<tr>
-							<td id="type">1</td>
-							<td id="name">어느사람</td>
-							<td id="num">18-12345678</td>
-							<td id="date">2019.8.4</td>
-						</tr>
-
-						<tr>
-							<td id="type">0</td>
-							<td id="name">사람임</td>
-							<td id="num">17-12345678</td>
-							<td id="date">2018.8.4</td>
-						</tr>
 					</tbody>
 				</table>
+				<div id="nodata" class="subTitle" style="text-align: center;"></div>
 			</article>
 		</section>
 
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		aaa
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
 		<footer>
 		</footer>
 	</div>

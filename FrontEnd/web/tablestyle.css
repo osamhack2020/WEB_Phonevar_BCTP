@@ -58,7 +58,7 @@ tbody > tr{
     /*box-shadow: inset 100px 100px;*/
     border-radius: 20px;
 }
-tbody > tr:hover{
+article > table > tbody > tr:hover{
     background: #ecf0f3;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
     cursor: pointer;

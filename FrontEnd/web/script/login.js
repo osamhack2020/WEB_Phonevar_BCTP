@@ -21,7 +21,7 @@ $(function(){
         pw = $(".pw").val();
 		switch(slt){
 			case "0" : if(pw=="a"){
-                            location.href = 'management.html';
+                            location.href = 'management.html?unitName=전투지휘훈련단';
                         } else{
 							$(".noneID").css("display","none");
                             $(".nonePW").css("display","block");
@@ -29,7 +29,7 @@ $(function(){
                         }; break;
 				
 			case "1" :	if(pw=="aa"){
-                            location.href = 'management.html';
+                            location.href = 'management.html?unitName=제9보병사단';
                         } else{
                             $(".noneID").css("display","none");
                             $(".nonePW").css("display","block");
@@ -37,7 +37,7 @@ $(function(){
                         }; break;
 				
 			case "2" : if(pw=="aaa"){
-                            location.href = 'management.html';
+                            location.href = 'management.html?unitName=수도기계화보병사단';
                         } else{
                             $(".noneID").css("display","none");
                             $(".nonePW").css("display","block");
@@ -45,7 +45,7 @@ $(function(){
                         }; break;
 				
 			case "3" : if(pw=="aaaa"){
-                            location.href = 'management.html';
+                            location.href = 'management.html?unitName=전투지휘훈련단';
                         } else{
                             $(".noneID").css("display","none");
                             $(".nonePW").css("display","block");
