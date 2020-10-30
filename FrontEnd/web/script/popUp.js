@@ -55,6 +55,8 @@ function popup(){
 	
 		if($(loglist).children().length == 0){
 			$('#nologdata').text("데이터가 없습니다.");
+		}else{
+			$('#nologdata').text("");
 		}
 			
         });
