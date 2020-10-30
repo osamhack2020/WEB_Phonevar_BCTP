@@ -38,6 +38,7 @@ function popup(){
 			format: "json"
 		})
 		.done(function( data ) {
+		$('#loglist').html("");
 		$.each( data, function( i, item ) {
 			if(i == "userLogs"){
 				$.each( item, function( i, log) {
