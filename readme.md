@@ -44,7 +44,7 @@
 
 프로젝트는 크게 __앱/서버/웹__ 으로 개발 되었고, 각 파트는 다음과 같은 기능이 있습니다.
 * __사용자 앱 / 관리자 앱__
-	* 사용자 등록<br>
+	* __사용자 등록__<br>
   <table>
 		  <tr>  
 				  <td><img src = "./IMG/app_user.png" width="400"></td>  
@@ -93,10 +93,11 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
   * __현재 상황 확인__
   * __사용기록 열람 / 사용자상태 변경(정상/비정상)__
   * __스마트폰 사용시간 수정__(미구현)
-   <img src = "./IMG/web_login.png" width="500">  
-   <img src = "./IMG/web_main.png" width="500">
-   <img src = "./IMG/web_log.png" width="500">
-   <img src = "./IMG/web_time.png" width="500">
+  
+| <img src = "./IMG/web_login.png" width="500">  | <img src = "./IMG/web_main.png" width="500"> |
+|--|--|
+| <img src = "./IMG/web_log.png" width="500"> | <img src = "./IMG/web_time.png" width="500"> |
+
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자 등록
