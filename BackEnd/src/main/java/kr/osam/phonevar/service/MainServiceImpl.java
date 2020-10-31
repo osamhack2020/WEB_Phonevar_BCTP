@@ -164,8 +164,14 @@ public class MainServiceImpl implements MainService {
     }
 	
     @Override
-    public List<User> getUserList() {
-
-        return userMapper.getUserList();
+    public List<User> getUserList(Integer unitCode) {
+        List<User> userList = null;
+        if (unitCode == null) {
+            userList = userMapper.getUserList();
+        }
+        else {
+            userList = userMapper.getUserListByUnitCode();
+        }
+        return userList;
     }
 }
