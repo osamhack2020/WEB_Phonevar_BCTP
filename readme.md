@@ -105,6 +105,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자/관리자(admin)앱 설치 apk 받아 실행
+    
 * __서버__
   * 에저 서버에서 자동으로 실행 중 
 * __웹페이지__<br>
@@ -131,7 +132,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
  * 즉각성<br>
  사용자에게 사용시간 준수를 위해 푸시알림을 통해 미리 방지합니다. 만약 서버에서 비정상적인 사용이 감지 될 경우, 즉시 관리자앱이 설치된 스마트폰으로 알림이 가기 때문에 빠른 조치를 취할 수 있습니다.
  
- * 보완성<br>
+ * 보안성<br>
  스마트폰에 직접 설치되는 앱이기 때문에 다른 스마트폰을 이용해 반납하는 반납 위조의 행위를 막을 수 있습니다. 자동으로 스마트폰의 끄고 켜짐이 기록되기 때문에 기록 위조도 불가능합니다.
 
 ## 개선 방향
