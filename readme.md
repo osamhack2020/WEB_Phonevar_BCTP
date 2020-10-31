@@ -1,5 +1,3 @@
-
-
 ## 로고
 <img src = "./IMG/logo2.png" width="">
 
@@ -49,12 +47,12 @@
 	* 사용자 등록<br>
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user.png" width="300"></td>  
+				  <td><img src = "./IMG/app_user.png" width="400"></td>  
 				  <td>데이터 위조를 방지하기 위해 서버 데이터베이스에 입력된 사용자만 스마트폰 등록을 할 수 있도록 했습니다. 기본적인 인적사항은 국방부 데이터와 연계한다고 가정했습니다.</td>  
 		  </tr>
   </table>	
   
-  * 사용기록 작성<br>
+  * __사용기록 작성__<br>
 	  다음아래의 기준에 따라 이상사용기록이 작성됩니다.
 	  * __기준 1__
 	  ![Alt text](/IMG/1.png)
@@ -62,27 +60,26 @@
 	  ![Alt text](/IMG/2.png)
 	  * __기준 3__
 	  ![Alt text](/IMG/3.png)
-  * 스마트폰 푸시 알림
+  * __스마트폰 푸시 알림__
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_push.png" width="300"></td>  
+				  <td><img src = "./IMG/app_user_push.png" width="400"></td>  
 				  <td>제출시간 10분 전 병사들은 앱을 통해 스마트폰 제출 알림을 받습니다.(사용자앱) </td> 
-				  <td><img src = "./IMG/app_admin_push.png" width="300"></td>  
+				  <td><img src = "./IMG/app_admin_push.png" width="400"></td>  
 				  <td>비정상적인 사용이 감지될 경우 앱을 통해 이상사용 알림을 받습니다.(관리자앱) 
 		  </tr>
   </table>	
 
-	* 현재 상황 확인 
+	* __현재 상황 확인 __
   <table>
 		  <tr>  
 				  <td><img src = "./IMG/app_user_list.png" width="300"></td>  
 				  <td>관리자 앱을 통해 병사들의 이상 여부를 확인 할 수 있습니다.</td>  
 		  </tr>
   </table>
-  * 사용기록 서버 전송
+  * __사용기록 서버 전송__
 
 * __서버__
-  * 사용기록 검증
   * 관리자 푸시알림
 ![Alt text](/IMG/web_login.png)
 ![Alt text](/IMG/web_main.png)
@@ -92,7 +89,7 @@
   * 사용기록 열람
   * 스마트폰 사용시간 수정
   * 사용자상태 변경(정상/비정상)
-
+* __사용기록 검증__
 
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
