@@ -3,10 +3,9 @@
 ## 로고
 <img src = "./PPT/logo2.png" width="">
 
- <span><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337946.svg" width="50"></a><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337946.svg" width="50"></a>
-</span>
-  <span></span>
-  
+ <p><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337946.svg" width="50"></a><-발표자료 <a href="https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view"><img src="https://www.flaticon.com/svg/static/icons/svg/3074/3074767.svg" width="50"></a><-소개영상
+</p>
+
 # 프로젝트 개요📖
 
 ## 개발과제
