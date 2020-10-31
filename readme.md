@@ -3,7 +3,10 @@
 ## 로고
 <img src = "./PPT/logo2.png" width="">
 
-
+ <span><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337946.svg" width="50"></a><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337946.svg" width="50"></a>
+</span>
+  <span></span>
+  
 # 프로젝트 개요📖
 
 ## 개발과제
@@ -13,21 +16,28 @@
 * 기존 스마트폰 제출방식의 문제점
    * 동시에 여러명이 반납하는 쏠림 현상으로 인한  제출시간 지연
    * 반납과 반출을 눈으로 하나하나 확인해야하는 인력적인 수요
-<p align = "center">“<span style ="color:red">수동</span>”적인 제출 시스템  ➔ “<span style ="color:green">능동</span>”적인 제출 시스템</p>
-
+<p align = "center">“수동”적인 제출 시스템  ➔ “능동”적인 제출 시스템</p>
 
 ## Phonevar란?
 장병들의 주도적인 스마트폰 사용 및 관리를 자동으로 도와주는 서비스 앱입니다.
 
+## 해결방안
 
-## 아이디어
+>사이버지식정보방 사용일지처럼
+“스마트폰의 사용일지”를 남겨
+관리자가 확인하면 되지 않을까?
+
+**스마트폰 사용시간 외 폰이 켜지거나 꺼지는 기록을 모두 남기고 관리자에게 비정상 사용 기록을 알려주자!**
 스마트폰의 끄고 켜짐을 기준으로 사용기록을 기록해 사용자가 정상적인 사용을 하고 있는지 비정상적인 사용을 하고 있는지 관리자가 사용기록을 확인하여 사용위한 사용자를 식별하는 아이디어입니다.
 
+## 개념도
+![Alt text](/PPT/개념도.png)
 
-## 프로젝트 기능 설계
+# 프로젝트 기능 설계
 프로젝트는 크게 3가지 구분으로 개발 되었고, 각 구분은 다음과 같은 기능이 있습니다.
 * 사용자 앱 / 관리자 앱
   * 사용자 등록
+	  ![Alt text](/PPT/app_user.png)
   * 사용기록 작성
 	  * 기준 1
 	  ![Alt text](/PPT/1.png)
@@ -41,13 +51,16 @@
 * 서버
   * 사용기록 검증
   * 관리자 푸시알림
+![Alt text](/PPT/web_login.png)
+![Alt text](/PPT/web_main.png)
+![Alt text](/PPT/web_log.png)
 
 * 웹페이지
   * 사용기록 열람
   * 스마트폰 사용시간 수정
   * 사용자상태 변경(정상/비정상)
 
-## 기술 스택 (Technique Used)
+## [기술 스택 (Technique Used)](/PPT/techstack.md)
 * Server(back-end)
   * Spring Framework 4
   * MySQL 5.6
@@ -154,5 +167,5 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 <img src = "./PPT/logo.png" width="100px">
 
 더 자세한 개발현황은
-[https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e)
+<https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e>
 에서 확인하시면 됩니다.
