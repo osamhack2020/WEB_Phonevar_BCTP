@@ -104,37 +104,32 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
-  * apk폴더에 apk를 받아 실행
-
-
-  * 스마트폰 제출 푸시 알림
-  * 사용기록 서버 전송
+  * 사용자/관리자(admin)앱 설치 apk 받아 실행
 * __서버__
-
-  * 관리자 푸시알림
-
+  * 에저 서버에서 자동으로 실행 중 
 * __웹페이지__<br>
   MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)<br>
-  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
-
-
+  
 | 계정 | ID              | P/W |
 |-----|-----------------|-----|
 | 1   | 전투지휘훈련단    |  a  |
 | 2   | 제9보병사단       | aa  |
 | 3   | 수도기계화보병사단 | aaa |
-    
+
+
+  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+
 
 
 ### [기술 스택 (Technique Used)](/techstack.md)
 
-# 프로젝트 전망
+# 프로젝트 전망🔭
 ## 장점
  * 경제성<br>
-반납을 하기위해 앱만 설치하면되고, 부가적인 반납시스템 구축 비용도 없다. 인원추가에 대한 물리적제한과 비용도 없습니다. 또한 유지보수 수요가 적으며, 이에 대한 부가적인 비용도 없습니다.   
+반납을 하기위해 앱만 설치하면되고, 부가적인 반납시스템 구축 비용도 없습니다. 인원추가에 대한 물리적제한과 비용도 없습니다. 또한 유지보수 수요가 적으며, 이에 대한 부가적인 비용도 없습니다.   
 
  * 즉각성<br>
- 사용자에게 사용시간 준수를 위해 푸시알림을 통해 미리방지하며, 만약 서버에서 비정상적인 사용이 감지 될 경우, 즉시 관리자앱이 설치된 스마트폰으로 알림이 가기 때문에 빠른 조치를 취할 수 있습니다.
+ 사용자에게 사용시간 준수를 위해 푸시알림을 통해 미리 방지합니다. 만약 서버에서 비정상적인 사용이 감지 될 경우, 즉시 관리자앱이 설치된 스마트폰으로 알림이 가기 때문에 빠른 조치를 취할 수 있습니다.
  
  * 보완성<br>
  스마트폰에 직접 설치되는 앱이기 때문에 다른 스마트폰을 이용해 반납하는 반납 위조의 행위를 막을 수 있습니다. 자동으로 스마트폰의 끄고 켜짐이 기록되기 때문에 기록 위조도 불가능합니다.
@@ -156,7 +151,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 아이폰용도 BackgroundTasks Framework(App Refresh Task)를 이용해 추후 개발 가능합니다.
 
 * 데이터 위조 방지 : <br>
-JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성 강화
+JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성을 강화합니다.
 
 ## 발전 가능성
  * 1차적 시장 <br>
@@ -174,13 +169,13 @@ JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성 강화
 [![Alt text](/IMG/video.png)](https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view)
 
 
-## 팀 정보 (Team Information)
+## 팀 정보 (Team Information)👨‍👦‍👦
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
 - jeong jong woo (knight7024@naver.com), Github Id: knight7024
 - lee dong june (yhs06280@gmail.com), Github Id: JunBeul
 
 
-## 저작권 및 사용권 정보 (Copyleft / End User License)
+## 저작권 및 사용권 정보 (Copyleft / End User License)📢
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
  
 
