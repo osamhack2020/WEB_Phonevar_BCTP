@@ -63,9 +63,9 @@
   * __스마트폰 푸시 알림__
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_push.png" width="400"></td>  
+				  <td><img src = "./IMG/app_user_push.png" width="500"></td>  
 				  <td>제출시간 10분 전 병사들은 앱을 통해 스마트폰 제출 알림을 받습니다.(사용자앱) </td> 
-				  <td><img src = "./IMG/app_admin_push.png" width="400"></td>  
+				  <td><img src = "./IMG/app_admin_push.png" width="500"></td>  
 				  <td>비정상적인 사용이 감지될 경우 앱을 통해 이상사용 알림을 받습니다.(관리자앱) 
 		  </tr>
   </table>	
@@ -73,24 +73,29 @@
 	* __현재 상황 확인 __
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_list.png" width="300"></td>  
+				  <td><img src = "./IMG/app_user_list.png" width="250"></td>  
 				  <td>관리자 앱을 통해 병사들의 이상 여부를 확인 할 수 있습니다.</td>  
 		  </tr>
   </table>
   * __사용기록 서버 전송__
 
 * __서버__
-  * 관리자 푸시알림
-![Alt text](/IMG/web_login.png)
-![Alt text](/IMG/web_main.png)
-![Alt text](/IMG/web_log.png)
+  * __API문서 제공__<br>
+	  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list) 
+  * __관리자 푸시알림전송__
+  * __사용기록 검증__
 
-* __웹페이지__
-  * 사용기록 열람
-  * 스마트폰 사용시간 수정
-  * 사용자상태 변경(정상/비정상)
-* __사용기록 검증__
-
+* __웹페이지__(관리자용)
+  * __부대 로그인__
+    <img src = "./IMG/web_login.png" height="800">  
+  * __현재 상황 확인__
+    <img src = "./IMG/web_main.png" height="800">
+  * __사용기록 열람 / 사용자상태 변경(정상/비정상)__
+    <img src = "./IMG/web_log.png" height="800">
+  * __스마트폰 사용시간 수정__(미구현)
+   <img src = "./IMG/web_time.png" height="800">
+   
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자 등록
@@ -118,8 +123,7 @@ MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacen
 | 2   | 제9보병사단       | aa  |
 | 3   | 수도기계화보병사단 | aaa |
     
-API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
-API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list)
+
 
 ### [기술 스택 (Technique Used)](/techstack.md)
 
