@@ -138,7 +138,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 ## 팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
 - jeong jong woo (knight7024@naver.com), Githun Id: knight7024
-- junBeul (yhs06280@gmail.com), Githun Id: JunBeul
+- lee dong june (yhs06280@gmail.com), Githun Id: JunBeul
 
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
@@ -146,4 +146,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
  
 
 <img src = "./PPT/logo.png" width="100px">
-더 자세한 개발현황은 [https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e) 에서 확인하시면 됩니다.
+
+더 자세한 개발현황은
+[https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e)
+에서 확인하시면 됩니다.
