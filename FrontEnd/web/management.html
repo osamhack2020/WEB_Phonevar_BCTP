@@ -34,8 +34,8 @@
 			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     	}
 		
-		var unitId = 1;
-		
+		var unitId = 0;
+		var unitCode = 0;
 		var phonevarunitAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit";
 		var unitName = getParameterByName("unitName")
 		
@@ -46,11 +46,12 @@
 		.done(function( data ) {
 			console.log(data);
 			unitId = data.id;
+			unitCode = data.unitCode;
 		});
 		
 		var phonevaruserAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/list";
 		$.getJSON( phonevaruserAPI, {
-			unitCode:unitId,
+			unitCode:unitCode,
 			format: "json"
 		})
 		.done(function( data ) {
