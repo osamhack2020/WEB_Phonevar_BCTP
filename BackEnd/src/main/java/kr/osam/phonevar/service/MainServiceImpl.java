@@ -170,7 +170,8 @@ public class MainServiceImpl implements MainService {
             userList = userMapper.getUserList();
         }
         else {
-            userList = userMapper.getUserListByUnitCode(unitCode);
+            Integer unitId = unitInfoMapper.getIdByUnitCode(unitCode);
+            userList = userMapper.getUserListByUnitId(unitId);
         }
         return userList;
     }
