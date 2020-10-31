@@ -1,4 +1,5 @@
 
+
 ## 로고
 <img src = "./IMG/logo2.png" width="">
 
@@ -6,7 +7,7 @@
  <p align = "center"><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337949.svg" width="50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view"><img src="https://www.flaticon.com/svg/static/icons/svg/3074/3074767.svg" width="50"></a>
 </p>
 
-# 프로젝트 개요📖
+# 📖프로젝트 개요
 
 ## 개발과제
 생활관 병사 스마트폰 비대면 반납 앱 [제안처 : 군수전산소]
@@ -42,7 +43,7 @@
 - 기록된 내용들은 모두 이상사용들만 나타내고 과거의 모든 기록은 관리자 페이지를 통해 열람 할 수 있습니다.
 - 서버에서는 이상사용이 감지가 되면 관리자 앱에 푸시알림으로 알려 즉각조치가 가능하도록 합니다.
 
-# 프로젝트 기능설계📝
+# 📝프로젝트 기능설계
 
 프로젝트는 크게 __앱/서버/웹__ 으로 개발 되었고, 각 파트는 다음과 같은 기능이 있습니다.
 * __사용자 앱 / 관리자 앱__(APP)
@@ -128,7 +129,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
 ### [기술 스택 (Technique Used)](/techstack.md)
 
-# 프로젝트 전망🔭
+# 🔭프로젝트 전망
 ## 장점
  * 경제성<br>
 반납을 하기위해 앱만 설치하면되고, 부가적인 반납시스템 구축 비용도 없습니다. 인원추가에 대한 물리적제한과 비용도 없습니다. 또한 유지보수 수요가 적으며, 이에 대한 부가적인 비용도 없습니다.   
@@ -164,7 +165,7 @@ JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성을 강화�
  * 2차적 시장 <br>
 해당 서비스의 기록작성 기준을 스마트폰 전원 on/off가 아닌 블루투스 비콘의 신호여부로 전환하여 기숙사, 도서관의 인원출입 관리나 대중교통의 승하차 승객 관리서비스 앱으로 발전할 수 있다고 전망하고 있습니다.
 
-# 프로젝트 관리💻
+# 💻프로젝트 관리
 ## 흐름도
 ![Alt text](/IMG/흐름도.png)
 ## 개발일정
@@ -174,13 +175,13 @@ JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성을 강화�
 [![Alt text](/IMG/video.png)](https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view)
 
 
-## 팀 정보 (Team Information)👨‍👦‍👦
+## 👨‍👦‍👦팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
 - jeong jong woo (knight7024@naver.com), Github Id: knight7024
 - lee dong june (yhs06280@gmail.com), Github Id: JunBeul
 
 
-## 저작권 및 사용권 정보 (Copyleft / End User License)📢
+## 📢저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
  
 
