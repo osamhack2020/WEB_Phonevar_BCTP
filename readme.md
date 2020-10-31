@@ -1,6 +1,3 @@
-
-
-## 로고
 <img src = "./IMG/logo2.png" width="">
 
  <p align = "center">빠른 링크</p>
