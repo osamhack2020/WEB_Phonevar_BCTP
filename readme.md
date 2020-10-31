@@ -1,7 +1,7 @@
 
 
 ## 로고
-<img src = "./PPT/logo2.png" width="">
+<img src = "./IMG/logo2.png" width="">
 
  <p align = "center"><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337949.svg" width="50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view"><img src="https://www.flaticon.com/svg/static/icons/svg/3074/3074767.svg" width="50"></a>
 </p>
@@ -31,50 +31,84 @@
 
 ## 폰바의 방향성
 * __최소한의 데이터를 이용__<br>
-  사용자가 정상적인 사용을 한다면 스마트폰에 기록이 남지 않아 기록 전송을 위한 데이터가 사용되지 않는다. 하지만 이상사용이 있다면 서버로 바로 데이터 전송이 일어난다.
+  사용자가 정상적인 사용을 한다면 스마트폰에 기록이 남지 않아 기록 전송을 위한 데이터가 사용되지 않는다. 하지만 이상사용이 있다면 서버로 바로 데이터 전송이 일어납니다.
 * __전원종료 제출방식을 이용__<br>
-  직접 만지지 않아도 스마트폰을 사용할 수 있는 원격 장치의 이용을 막고자 전원종료 제출 방식을 필수로 한다. ex)블루투스 이어폰을 이용한 음성제어 명령
+  직접 만지지 않아도 스마트폰을 사용할 수 있는 원격 장치의 이용을 막고자 전원종료 제출 방식을 필수로 합니다. ex)블루투스 이어폰을 이용한 음성제어 명령
 
 ## 개념도
-![Alt text](/PPT/개념도.png)
-- 스마트폰 사용시간 외 이상사용이 감지 될 경우 이를 기록하고 그 기록을 서버에 전송하여 관리자가 이상사용을 확인할 수 있도록 한다.
-- 스마트폰에서는 지속적으로 이상사용을 감지하고, 서버에 기록을 전송하기 전까지는 폰에 계속해서 기록이 쌓인다.
-- 기록된 내용들은 모두 이상사용들만 나타내고 과거의 모든 기록은 관리자 페이지를 통해 열람 할 수 있다.
-- 서버에서는 이상사용이 감지가 되면 관리자 앱에 푸시알림으로 알려 즉각조치가 가능하도록 한다.
+![Alt text](/IMG/개념도.png)
+- 스마트폰 사용시간 외 이상사용이 감지 될 경우 이를 기록하고 그 기록을 서버에 전송하여 관리자가 이상사용을 확인할 수 있도록 합니다.
+- 스마트폰에서는 지속적으로 이상사용을 감지하고, 서버에 기록을 전송하기 전까지는 폰에 계속해서 기록이 쌓입니다.
+- 기록된 내용들은 모두 이상사용들만 나타내고 과거의 모든 기록은 관리자 페이지를 통해 열람 할 수 있습니다.
+- 서버에서는 이상사용이 감지가 되면 관리자 앱에 푸시알림으로 알려 즉각조치가 가능하도록 합니다.
 
-# 프로젝트 기능 설계
-프로젝트는 크게 3가지 구분으로 개발 되었고, 각 구분은 다음과 같은 기능이 있습니다.
-* 사용자 앱 / 관리자 앱
+# 프로젝트 기능설계
+
+프로젝트는 크게 __앱/서버/웹__ 으로 개발 되었고, 각 파트는 다음과 같은 기능이 있습니다.
+* __사용자 앱 / 관리자 앱__
   * 사용자 등록
-	  ![Alt text](/PPT/app_user.png)
+	  ![Alt text](/IMG/app_user.png)
   * 사용기록 작성
 	  * 기준 1
-	  ![Alt text](/PPT/1.png)
+	  ![Alt text](/IMG/1.png)
 	  * 기준 2
-	  ![Alt text](/PPT/2.png)
+	  ![Alt text](/IMG/2.png)
 	  * 기준 3
-	  ![Alt text](/PPT/3.png)
+	  ![Alt text](/IMG/3.png)
   * 스마트폰 제출 푸시 알림
   * 사용기록 서버 전송
 
-* 서버
+* __서버__
   * 사용기록 검증
   * 관리자 푸시알림
-![Alt text](/PPT/web_login.png)
-![Alt text](/PPT/web_main.png)
-![Alt text](/PPT/web_log.png)
+![Alt text](/IMG/web_login.png)
+![Alt text](/IMG/web_main.png)
+![Alt text](/IMG/web_log.png)
 
-* 웹페이지
+* __웹페이지__
   * 사용기록 열람
   * 스마트폰 사용시간 수정
   * 사용자상태 변경(정상/비정상)
 
-## [기술 스택 (Technique Used)](/techstack.md)
 
-## 흐름도
-![Alt text](/PPT/흐름도.png)
+## 프로젝트 사용법 (Getting Started)
+* __사용자 앱 / 관리자 앱__
+  * 사용자 등록
+	  ![Alt text](/IMG/app_user.png)
+  * 사용기록 작성
+	  * 기준 1
+	  ![Alt text](/IMG/1.png)
+	  * 기준 2
+	  ![Alt text](/IMG/2.png)
+	  * 기준 3
+	  ![Alt text](/IMG/3.png)
+  * 스마트폰 제출 푸시 알림
+  * 사용기록 서버 전송
 
+* __서버__
+  * 사용기록 검증
+  * 관리자 푸시알림
+![Alt text](/IMG/web_login.png)
+![Alt text](/IMG/web_main.png)
+![Alt text](/IMG/web_log.png)
 
+* __웹페이지__
+  * 사용기록 열람
+  * 스마트폰 사용시간 수정
+  * 사용자상태 변경(정상/비정상)
+MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)
+| 계정 | ID              | P/W |
+|-----|-----------------|-----|
+| 1   | 전투지휘훈련단    |  a  |
+| 2   | 제9보병사단       | aa  |
+| 3   | 수도기계화보병사단 | aaa |
+    
+API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list)
+
+### [기술 스택 (Technique Used)](/techstack.md)
+
+# 프로젝트 전망
 ## 장점
  * 경제성<br>
 반납을 하기위해 앱만 설치하면되고, 부가적인 반납시스템 구축 비용도 없다. 인원추가에 대한 물리적제한과 비용도 없다. 또한 유지보수 수요가 적으며, 이에 대한 부가적인 비용도 없습니다.   
@@ -110,35 +144,18 @@ JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성 강화
  * 2차적 시장 <br>
 해당 서비스의 기록작성 기준을 스마트폰 전원 on/off가 아닌 블루투스 비콘의 신호여부로 전환하여 기숙사, 도서관의 인원출입 관리나 대중교통의 승하차 승객 관리서비스 앱으로 발전할 수 있다고 전망하고 있습니다.
 
+# 프로젝트 관리
+## 흐름도
+![Alt text](/IMG/흐름도.png)
+## 개발일정
+![Alt text](/IMG/일정.png)
+
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * ECMAScript 6 지원 브라우저 사용
 * 권장: Google Chrome 버젼 77 이상
 
 ## 프로젝트 동영상
-[![Alt text](/PPT/video.png)](https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view)
-
-
-## 프로젝트 사용법 (Getting Started)
-
-
-
-MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)
-  * 계정
-    * id : 전투지휘훈련단
-      p/w : a
-    * id : 제9보병사단
-      p/w : aa
-    * id : 수도기계화보병사단
-      p/w : aaa
-    
-API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
-API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list)
-
-## 개발일정
-![Alt text](/PPT/일정.png)
-
-
-
+[![Alt text](/IMG/video.png)](https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view)
 
 
 ## 팀 정보 (Team Information)
@@ -151,7 +168,7 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
  
 
-<img src = "./PPT/logo.png" width="100px">
+<img src = "./IMG/logo.png" width="100px">
 
 더 자세한 개발현황은
 <https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e>
