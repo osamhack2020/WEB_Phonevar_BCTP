@@ -51,20 +51,20 @@
     font-size: 1.8em;
     font-family: 'Noto Sans KR', sans-serif;
 }
-tbody > tr{
+.tablesorter > tbody > tr{
     box-shadow: 0;
     padding: 0 -8px 0 -8px;
     transition: .2s;
     /*box-shadow: inset 100px 100px;*/
     border-radius: 20px;
 }
-article > table > tbody > tr:hover{
+.tablesorter > tbody > tr:hover{
     background: #ecf0f3;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
     cursor: pointer;
     border-radius: 20px;
 }
-tbody > tr:active{
+.tablesorter > tbody > tr:active{
 	box-shadow: 13px 13px 20px #fff, -13px -13px 20px #cbced1;
 }
 .tablesorter td#type{
