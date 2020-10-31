@@ -11,8 +11,8 @@ public interface UserMapper {
     @Select("SELECT * FROM phonevar.user WHERE isDeleted = 0")
     List<User> getUserList();
 
-    @Select("SELECT * FROM phonevar.user WHERE unitCode = #{unitCode} AND isDeleted = 0")
-    List<User> getUserListByUnitCode(@Param("unitCode") int unitCode);
+    @Select("SELECT * FROM phonevar.user WHERE unitId = #{unitId} AND isDeleted = 0")
+    List<User> getUserListByUnitCode(@Param("unitId") int unitId);
 	
     @Select("SELECT * FROM phonevar.user WHERE id = #{id} AND isDeleted = 0")
     User getUserById(@Param("id") int id);
