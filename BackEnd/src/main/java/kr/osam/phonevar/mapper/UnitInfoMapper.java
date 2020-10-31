@@ -15,6 +15,9 @@ public interface UnitInfoMapper {
     @Select("SELECT unitCode FROM phonevar.unitinfo WHERE id = #{id} AND isDeleted = 0")
     Integer getUnitCodeById(@Param("id") int id);
 
+    @Select("SELECT id FROM phonevar.unitinfo WHERE unitCode = #{unitCode} AND isDeleted = 0")
+    Integer getIdByUnitCode(@Param("unitCode") int unitCode);
+
     @Select("SELECT * FROM phonevar.unitinfo WHERE isDeleted = 0")
     List<UnitInfo> getUnitList();
 }
