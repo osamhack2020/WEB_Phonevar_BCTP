@@ -117,7 +117,7 @@ MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacen
     * id : 제9보병사단
       p/w : aa
     * id : 수도기계화보병사단
-      p/w : aa
+      p/w : aaa
     
 API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
 API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list)
