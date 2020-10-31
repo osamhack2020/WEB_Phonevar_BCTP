@@ -44,11 +44,13 @@
 
 프로젝트는 크게 __앱/서버/웹__ 으로 개발 되었고, 각 파트는 다음과 같은 기능이 있습니다.
 * __사용자 앱 / 관리자 앱__(APP)
-	* __사용자 등록__<br>
+	* __사용자 등록__(사용자)<br>
   <table>
 		  <tr>  
 				  <td><img src = "./IMG/app_user.png" width="400"></td>  
-				  <td>데이터 위조를 방지하기 위해 서버 데이터베이스에 입력된 사용자만 스마트폰 등록을 할 수 있도록 했습니다. 기본적인 인적사항은 국방부 데이터와 연계한다고 가정했습니다.</td>  
+		  </tr>
+		  <tr>
+		          <td>데이터 위조를 방지하기 위해 서버 데이터베이스에 입력된 사용자만 스마트폰 등록을 할 수 있도록 했습니다. 기본적인 인적사항은 국방부 데이터와 연계한다고 가정했습니다.</td>  
 		  </tr>
   </table>	
   
@@ -60,11 +62,11 @@
 	  ![Alt text](/IMG/2.png)
 	  * __기준 3__
 	  ![Alt text](/IMG/3.png)
-  * __스마트폰 푸시 알림__
+  * __스마트폰 푸시 알림__(사용자/관리자)
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_push.png" width="500"></td>  
-				  <td><img src = "./IMG/app_admin_push.png" width="500"></td> 
+				  <td><img src = "./IMG/app_user_push.png" width="400"></td>  
+				  <td><img src = "./IMG/app_admin_push.png" width="400"></td> 
 		  </tr>
 		  <tr>
 			    <td>제출시간 10분 전 병사들은 앱을 통해 스마트폰 제출 알림을 받습니다.(사용자앱) </td>  
@@ -72,11 +74,13 @@
 		  </tr>
   </table>	
 
-	* __현재 상황 확인 __
+	* __현재 상황 확인__(관리자)
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_list.png" width="500"></td>  
-				  <td>관리자 앱을 통해 병사들의 이상 여부를 확인 할 수 있습니다.</td>  
+				  <td><img src = "./IMG/app_user_list.png" width="400"></td>  
+		  </tr>
+		  <tr>
+			    <td>관리자 앱을 통해 병사들의 이상 여부를 확인 할 수 있습니다.</td>  
 		  </tr>
   </table>
   * __사용기록 서버 전송__
