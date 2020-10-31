@@ -64,8 +64,8 @@ public class MainController {
 
     @ApiOperation(value = "유저 목록 불러오기")
     @RequestMapping(value = "/user/list", method = RequestMethod.GET)
-    public List<User> getUserList() {
-        return mainService.getUserList();
+    public List<User> getUserList(@RequestParam("unitCode") Integer unitCode) {
+        return mainService.getUserList(unitCode);
     }
 	
     @ApiOperation(value = "로그 전송")
