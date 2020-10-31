@@ -23,4 +23,3 @@
   * Java 
   * Firebase 
   * Retrofit2
-  * firebase cloud messaging
