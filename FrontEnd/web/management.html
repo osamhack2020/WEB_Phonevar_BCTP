@@ -35,7 +35,7 @@
     	}
 		
 		var unitId = 1;
-		var phonevaruserAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/list";
+		
 		var phonevarunitAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit";
 		var unitName = getParameterByName("unitName")
 		
@@ -48,33 +48,32 @@
 			unitId = data.id;
 		});
 		
-		
+		var phonevaruserAPI = "https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/user/list";
 		$.getJSON( phonevaruserAPI, {
+			unitCode:unitId,
 			format: "json"
 		})
 		.done(function( data ) {
 		$('#list').html("");
 		$.each( data, function( i, item ) {
-			if(item.unitId == unitId){
-				if (item.statusCode == 200){
-					var $tr = $('<tr></tr>').append(
-						$('<td>').attr( "id", "type" ).text("0"),
-						$('<td>').attr( "id", "name" ).text(item.name),
-						$('<td>').attr( "id", "num" ).text(item.serviceNumber),
-						$('<td>').attr( "id", "date" ).text(item.dischargeDate),
-						$('<td>').attr( "id", "id" ).text(item.id).hide()
-					);
-					$('#list').append($tr);
-				}else{
-					var $tr = $('<tr>').append(
-						$('<td>').attr( "id", "type" ).text("1"),
-						$('<td>').attr( "id", "name" ).text(item.name),
-						$('<td>').attr( "id", "num" ).text(item.serviceNumber),
-						$('<td>').attr( "id", "date" ).text(item.dischargeDate),
-						$('<td>').attr( "id", "id" ).text(item.id).hide()
-					);
-					$('#list').append($tr);
-				}
+			if (item.statusCode == 200){
+				var $tr = $('<tr></tr>').append(
+					$('<td>').attr( "id", "type" ).text("0"),
+					$('<td>').attr( "id", "name" ).text(item.name),
+					$('<td>').attr( "id", "num" ).text(item.serviceNumber),
+					$('<td>').attr( "id", "date" ).text(item.dischargeDate),
+					$('<td>').attr( "id", "id" ).text(item.id).hide()
+				);
+				$('#list').append($tr);
+			}else{
+				var $tr = $('<tr>').append(
+					$('<td>').attr( "id", "type" ).text("1"),
+					$('<td>').attr( "id", "name" ).text(item.name),
+					$('<td>').attr( "id", "num" ).text(item.serviceNumber),
+					$('<td>').attr( "id", "date" ).text(item.dischargeDate),
+					$('<td>').attr( "id", "id" ).text(item.id).hide()
+				);
+				$('#list').append($tr);
 			}
 		});
 			tableintype();
