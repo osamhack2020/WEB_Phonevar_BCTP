@@ -18,5 +18,9 @@
   * tablesorter-2.9.1
  
 * App
-  * Intent Service
+  * RxJava
+  * kotlin 
+  * Java 
+  * Firebase 
+  * Retrofit2
   * firebase cloud messaging
