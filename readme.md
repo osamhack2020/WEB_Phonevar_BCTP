@@ -159,6 +159,9 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 * 데이터 위조 방지 : <br>
 JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성을 강화합니다.
 
+* 실시간 데이터 베이스 : <br>
+Firebase Realtime Database를 이용하여 장병들의 사용현황의 변동 사항들을 실시간으로 새로고쳐서 알려줍니다.
+
 ## 발전 가능성
  * 1차적 시장 <br>
  지정과제를 낸 군수전산소를 주 타겟으로 하여 해당 서비스의 보안성과 보편성을 더욱 높이기 위해 기술개선을 합니다.
