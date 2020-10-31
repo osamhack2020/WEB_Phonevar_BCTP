@@ -1,6 +1,7 @@
 ## 로고
 <img src = "./IMG/logo2.png" width="">
 
+ <p align = "center">빠른 링크</p>
  <p align = "center"><a href="https://github.com/osamhack2020/WEB_Phonevar_BCTP/raw/master/PPT/PhoneVar_PPT.pdf"><img src="https://www.flaticon.com/svg/static/icons/svg/337/337949.svg" width="50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view"><img src="https://www.flaticon.com/svg/static/icons/svg/3074/3074767.svg" width="50"></a>
 </p>
 
@@ -105,7 +106,8 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자/관리자(admin)앱 설치 apk 받아 실행
-    
+    [병사용](https://drive.google.com/file/d/15qU7gckAxiXuz-qitA2IOG91qQ3OK7P9/view?usp=drivesdk)
+    [간부용](https://drive.google.com/file/d/1SJw5tPhLMPdV10SMPFX9-tNq9AUQHlMv/view?usp=drivesdk)
 * __서버__
   * 에저 서버에서 자동으로 실행 중 
 * __웹페이지__<br>
@@ -119,8 +121,6 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
 
   API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
-
-
 
 ### [기술 스택 (Technique Used)](/techstack.md)
 
