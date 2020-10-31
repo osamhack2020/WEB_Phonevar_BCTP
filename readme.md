@@ -81,21 +81,20 @@
 
 * __서버__
   * __API문서 제공__<br>
-	  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+	  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)<br>
 API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list) 
   * __관리자 푸시알림전송__
   * __사용기록 검증__
 
 * __웹페이지__(관리자용)
   * __부대 로그인__
-    <img src = "./IMG/web_login.png" height="800">  
+    <img src = "./IMG/web_login.png" width="">  
   * __현재 상황 확인__
-    <img src = "./IMG/web_main.png" height="800">
+    <img src = "./IMG/web_main.png" width="">
   * __사용기록 열람 / 사용자상태 변경(정상/비정상)__
-    <img src = "./IMG/web_log.png" height="800">
+    <img src = "./IMG/web_log.png" width="">
   * __스마트폰 사용시간 수정__(미구현)
-   <img src = "./IMG/web_time.png" height="800">
-   
+   <img src = "./IMG/web_log.png" width="">
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자 등록
