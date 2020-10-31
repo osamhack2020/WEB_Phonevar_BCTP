@@ -3,7 +3,7 @@
 <img src = "./PPT/logo2.png" width="">
 
 ## 프로젝트 동영상
-##### 준비중
+<img src = "./PPT/video.png" width="">
 
 ## 개발과제[지정과제]
 생활관 병사 스마트폰 비대면 반납 앱 [제안처 : 군수전산소]
