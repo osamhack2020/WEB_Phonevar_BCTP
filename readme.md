@@ -60,7 +60,7 @@
   * 스마트폰 사용시간 수정
   * 사용자상태 변경(정상/비정상)
 
-## [기술 스택 (Technique Used)](/PPT/techstack.md)
+## [기술 스택 (Technique Used)](/techstack.md)
 * Server(back-end)
   * Spring Framework 4
   * MySQL 5.6
