@@ -105,9 +105,9 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
-  * 사용자/관리자(admin)앱 설치 apk 받아 실행
-    [병사용](https://drive.google.com/file/d/15qU7gckAxiXuz-qitA2IOG91qQ3OK7P9/view?usp=drivesdk)
-    [간부용](https://drive.google.com/file/d/1SJw5tPhLMPdV10SMPFX9-tNq9AUQHlMv/view?usp=drivesdk)
+  * 사용자/관리자(admin)앱 설치 apk 받아 실행<p>
+    [사용자(병사용) 앱](https://drive.google.com/file/d/15qU7gckAxiXuz-qitA2IOG91qQ3OK7P9/view?usp=drivesdk)
+    [관리자(간부용) 앱](https://drive.google.com/file/d/1SJw5tPhLMPdV10SMPFX9-tNq9AUQHlMv/view?usp=drivesdk)
 * __서버__
   * 에저 서버에서 자동으로 실행 중 
 * __웹페이지__<br>
