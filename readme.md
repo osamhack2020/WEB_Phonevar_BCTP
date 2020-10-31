@@ -1,3 +1,4 @@
+
 ## 로고
 <img src = "./IMG/logo2.png" width="">
 
@@ -75,16 +76,19 @@
 		  </tr>
   </table>	
 
-	* __현재 상황 확인__(관리자)
+	 * __현재 상황 확인__(관리자) / __기록 확인__
   <table>
 		  <tr>  
-				  <td><img src = "./IMG/app_user_list.png" width="400"></td>  
+				  <td><img src = "./IMG/app_user_list.png" width="400"></td> 
+				  <td><img src = "./IMG/app_user_log.png" width="400"></td>   
 		  </tr>
 		  <tr>
 			    <td>관리자 앱을 통해 병사들의 이상 여부를 확인 할 수 있습니다.</td>  
+			    <td>관리자 앱을 통해 각 병사의 이상 기록들을 확인 할 수 있습니다.</td>  
 		  </tr>
   </table>
-  * __사용기록 서버 전송__
+    
+    * __사용기록 서버 전송__
 
 * __서버__(SERVER)
   * __API문서 제공__<br>
