@@ -108,6 +108,20 @@ $ 추후 추가
 ```
 ## 프로젝트 사용법 (Getting Started)
 
+
+
+MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)
+  * 계정
+    id : 전투지휘훈련단
+    p/w : a
+    id : 제9보병사단
+    p/w : aa
+    id : 수도기계화보병사단
+    p/w : aa
+    
+API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list](https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/list)
+
 ## 개발일정
 ![Alt text](/PPT/일정.png)
 
@@ -126,4 +140,4 @@ $ 추후 추가
  
 
 <img src = "./PPT/logo.png" width="100px">
-더 자세한 개발현황은 [https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e)에서 확인하시면 됩니다.
+더 자세한 개발현황은 [https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e](https://www.notion.so/inhaunivkdy/2020-bctp-668f236ca2b142698428b55c9dd8812e) 에서 확인하시면 됩니다.
