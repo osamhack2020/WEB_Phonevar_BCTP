@@ -90,13 +90,13 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
 * __웹페이지__(관리자용)
   * __부대 로그인__
-    <img src = "./IMG/web_login.png" width="500">  
   * __현재 상황 확인__
-    <img src = "./IMG/web_main.png" width="500">
   * __사용기록 열람 / 사용자상태 변경(정상/비정상)__
-    <img src = "./IMG/web_log.png" width="500">
   * __스마트폰 사용시간 수정__(미구현)
+   <img src = "./IMG/web_login.png" width="500">  
+   <img src = "./IMG/web_main.png" width="500">
    <img src = "./IMG/web_log.png" width="500">
+   <img src = "./IMG/web_time.png" width="500">
 ## 프로젝트 사용법 (Getting Started)
 * __사용자 앱 / 관리자 앱__
   * 사용자 등록
