@@ -10,14 +10,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
-@Configuration
 public class FireBaseCloudMessage {
-    @Bean
     public String getAccessToken() throws IOException {
         GoogleCredential googleCredential = GoogleCredential
                 .fromStream(getResourcePath())
                 .createScoped(Arrays.asList("https://www.googleapis.com/auth/cloud-platform"));
-        googleCredential.refreshToken();
+        
+        String accessToken = googleCredential.getAccessToken();
+        if (accessToken == null) googleCredential.refreshToken();
+        
         return googleCredential.getAccessToken();
     }
 
