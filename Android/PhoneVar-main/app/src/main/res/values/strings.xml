@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">폰바</string>
+    <string name="register">등록</string>
+    <string name="name">이름</string>
+    <string name="input_name">이름을 입력해주세요.</string>
+    <string name="service_number">군번</string>
+    <string name="input_service_number">군번을 입력해주세요.</string>
+    <string name="input_name_service_number_warning">이름과 군번을 입력해주세요!</string>
+    <string name="register_failed">등록에 실패했습니다.</string>
+    <string name="active_log">활동 기록</string>
+    <string name="refresh">새로고칭</string>
+    <string name="enlisted_soldier">for 병사</string>
+</resources>

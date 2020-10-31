@@ -1,0 +1,5 @@
+rootProject.name='PhoneVar'
+include ':app'
+include ':admin'
+include ':core'
+include ':core'

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">core</string>
+    <string name="loading">로딩 중</string>
+    <string name="error_network">네트워크 환경을 확인해주세요</string>
+    <string name="channel_name">PhoneVar</string>
+    <string name="channel_description">작동시간 모니터링</string>
+    <string name="turn_off_warning">휴대폰 전원을 꺼주시기 바랍니다.</string>
+</resources>
