@@ -28,15 +28,15 @@ public class MainServiceImpl implements MainService {
     private static final OkHttpClient okHttpClient = new OkHttpClient();
     private static final String PROJECT_URL = "https://fcm.googleapis.com/v1/projects/phonevar-8799e/messages:send";
     private final UserLogMapper userLogMapper;
-    private final FireBaseCloudMessage fireBaseCloudMessage;
+    // private final FireBaseCloudMessage fireBaseCloudMessage;
     private final UnitInfoMapper unitInfoMapper;
     private final UserMapper userMapper;
     private final JwtFactory jwtFactory;
 
     @Autowired
-    public MainServiceImpl(UserLogMapper userLogMapper, FireBaseCloudMessage fireBaseCloudMessage, UnitInfoMapper unitInfoMapper, UserMapper userMapper, JwtFactory jwtFactory) {
+    public MainServiceImpl(UserLogMapper userLogMapper, UnitInfoMapper unitInfoMapper, UserMapper userMapper, JwtFactory jwtFactory) {
         this.userLogMapper = userLogMapper;
-        this.fireBaseCloudMessage = fireBaseCloudMessage;
+        // this.fireBaseCloudMessage = fireBaseCloudMessage;
         this.unitInfoMapper = unitInfoMapper;
         this.userMapper = userMapper;
         this.jwtFactory = jwtFactory;
@@ -123,6 +123,7 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public String sendFcmMessage(Message message) throws IOException {
+        FireBaseCloudMessage fireBaseCloudMessage = new FireBaseCloudMessage();
         Request request = new Request.Builder()
                 .url(PROJECT_URL)
                 .post(RequestBody.create(objectMapper.writeValueAsString(makeFcmMessage(message)), okhttp3.MediaType.parse("application/json; charset=utf-8")))
