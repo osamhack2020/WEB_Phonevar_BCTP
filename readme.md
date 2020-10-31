@@ -46,8 +46,9 @@
 
 프로젝트는 크게 __앱/서버/웹__ 으로 개발 되었고, 각 파트는 다음과 같은 기능이 있습니다.
 * __사용자 앱 / 관리자 앱__
-  * 사용자 등록
-	  ![Alt text](/IMG/app_user.png)
+  * 사용자 등록<br>
+	  <img src = "./IMG/app_user.png" width="50">
+	  __데이터 위조를 방지하기 위해 서버 데이터베이스에 입력된 사용자만 앱 사용 등록할 수 있도록 했습니다.__ 기본적인 인적사항은 국방부와 연계한다는 가정
   * 사용기록 작성
 	  * 기준 1
 	  ![Alt text](/IMG/1.png)
@@ -97,6 +98,7 @@
   * 스마트폰 사용시간 수정
   * 사용자상태 변경(정상/비정상)
 MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)
+
 | 계정 | ID              | P/W |
 |-----|-----------------|-----|
 | 1   | 전투지휘훈련단    |  a  |
@@ -160,8 +162,8 @@ JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성 강화
 
 ## 팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
-- jeong jong woo (knight7024@naver.com), Githun Id: knight7024
-- lee dong june (yhs06280@gmail.com), Githun Id: JunBeul
+- jeong jong woo (knight7024@naver.com), Github Id: knight7024
+- lee dong june (yhs06280@gmail.com), Github Id: JunBeul
 
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
