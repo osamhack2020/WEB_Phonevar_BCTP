@@ -50,6 +50,9 @@
   * OkHttp 3
   * JWT
   * Jackson 2.11
+  * Nginx
+  * Tomcat
+  * Certbot
 
 * front-end
   * javascript
@@ -90,6 +93,9 @@
 
 * 아이폰 사용자 : <br>
 아이폰용도 BackgroundTasks Framework(App Refresh Task)를 이용해 추후 개발 가능합니다.
+
+* 데이터 위조 방지 : <br>
+JWT에 Access Token과 Refresh Token 방식을 적용하여 보안성 강화
 
 ## 발전 가능성
  * 1차적 시장 <br>
