@@ -21,5 +21,5 @@ public interface MainService {
 
     List<UnitInfo> getUnitList();
     
-    List<User> getUserList();
+    List<User> getUserList(Integer unitCode);
 }
