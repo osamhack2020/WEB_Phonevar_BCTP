@@ -109,19 +109,14 @@ API EXAMPLE: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/api/unit/lis
 
   * 스마트폰 제출 푸시 알림
   * 사용기록 서버 전송
-
 * __서버__
-  * 사용기록 검증
-  * 관리자 푸시알림
-![Alt text](/IMG/web_login.png)
-![Alt text](/IMG/web_main.png)
-![Alt text](/IMG/web_log.png)
 
-* __웹페이지__
-  * 사용기록 열람
-  * 스마트폰 사용시간 수정
-  * 사용자상태 변경(정상/비정상)
-MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)
+  * 관리자 푸시알림
+
+* __웹페이지__<br>
+  MAIN PAGE: [https://bctp.koreacentral.cloudapp.azure.com/](https://bctp.koreacentral.cloudapp.azure.com/)<br>
+  API DOC: [https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html](https://bctp.koreacentral.cloudapp.azure.com/phonevar/swagger-ui.html)
+
 
 | 계정 | ID              | P/W |
 |-----|-----------------|-----|
