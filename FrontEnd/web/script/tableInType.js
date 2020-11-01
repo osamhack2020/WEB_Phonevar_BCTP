@@ -38,14 +38,14 @@ function logtableintype() {
 
         for(var i = 0; i < num; i++){
             if(tbType.eq(i).text() == "0"){
-                tbType.eq(i).css("background-color","#ef325a");
+                tbType.eq(i).css("background-color","#ef325a").css("color", "rgb(236, 240, 243, 0)").css("transition", ".2s");
                 tbType.eq(i).text("꺼짐");
             }else if(tbType.eq(i).text() == "1"){
-                tbType.eq(i).css("background-color","#289940");
+                tbType.eq(i).css("background-color","#289940").css("color", "rgb(236, 240, 243, 0)").css("transition", ".2s");
                 tbType.eq(i).text("켜짐");
                 badGay++;
             }else{
-				tbType.eq(i).css("background-color","#f5ab45");
+				tbType.eq(i).css("background-color","#f5ab45").css("color", "rgb(236, 240, 243, 0)").css("transition", ".2s");
                 tbType.eq(i).text("에러");
                 badGay++;
 			}
@@ -54,7 +54,7 @@ function logtableintype() {
         var color;
         var typeT;
         $('#loglist tr').hover(function(){
-            typeT = $(this).children('#type').text();
+            typeT = $(this).children('#logType').text();
             if(typeT == "0" || typeT == "꺼짐"){
                 $(this).children('#logType').css("color", "rgb(236, 240, 243, 1)");
             }else if(typeT == "1" || typeT == "켜짐"){
