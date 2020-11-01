@@ -5,7 +5,7 @@
 </p>
 
 ## 프로젝트 동영상
-[![Alt text](/IMG/video.png)](https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view)
+<p align = "center"><a href="https://drive.google.com/file/d/1-sjLwo3VrR89QWUArvEd-nJdfJbxaQRy/view"><img src="/IMG/video.png" width="500"></a></p>
 
 <br><br>
 # 📖프로젝트 개요
