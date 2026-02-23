@@ -184,7 +184,7 @@ Firebase Realtime Database를 이용하여 장병들의 사용현황의 변동 �
 ## 👨‍👦‍👦팀 정보 (Team Information)
 - kim dae yu (dea0323@gmail.com), Github Id: kimdaeyu
 - jeong jong woo (knight7024@naver.com), Github Id: knight7024
-- lee dong june (yhs06280@gmail.com), Github Id: JunBeul
+- lee dong jun, Github Id: JunBeul
 
 
 ## 📢저작권 및 사용권 정보 (Copyleft / End User License)
